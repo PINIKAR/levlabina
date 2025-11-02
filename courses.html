@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קורסים - לבלבינה</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover, nav a.active {
+            text-decoration: underline;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-header h1 {
+            color: #933ec7;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(147, 62, 199, 0.3);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 2rem;
+        }
+
+        .course-content h2 {
+            color: #337cdc;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-features li {
+            padding: 0.5rem 0;
+            color: #555;
+        }
+
+        .course-features li::before {
+            content: "✓ ";
+            color: #933ec7;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        .course-btn {
+            background: linear-gradient(135deg, #933ec7, #5f5ad7);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .course-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(147, 62, 199, 0.4);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+            nav a { display: block; margin: 0.8rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="לבלבינה" class="logo">
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="about.html">אודות</a>
+            <a href="services.html">שירותים</a>
+            <a href="courses.html" class="active">קורסים</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>הקורסים וההדרכות שלי</h1>
+            <p>תכנים מעשיים, מובנים ומותאמים אישית – כי כל אחד לומד אחרת</p>
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <img src="course-ai.jpg" alt="קורס AI למטפלים" class="course-image">
+                <div class="course-content">
+                    <h2>AI למטפלים</h2>
+                    <p>קורס מקיף ללימוד עבודה עם בינה מלאכותית בעולם הטיפול וההתפתחות האישית.</p>
+                    <ul class="course-features">
+                        <li>עבודה מעשית עם GPT וכלי AI</li>
+                        <li>יצירת תכנים טיפוליים בעזרת AI</li>
+                        <li>אוטומציות חכמות לעסק שלך</li>
+                        <li>ליווי אישי לאורך הקורס</li>
+                    </ul>
+                    <a href="contact.html" class="course-btn">פרטים נוספים</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="course-content.jpg" alt="יצירת תוכן חכם" class="course-image">
+                <div class="course-content">
+                    <h2>יצירת תוכן חכם</h2>
+                    <p>איך ליצור תוכן איכותי ומשמעותי בעזרת כלים דיגיטליים – תוך שמירה על הקול האישי שלכם.</p>
+                    <ul class="course-features">
+                        <li>כתיבה יעילה עם AI</li>
+                        <li>יצירת גרפיקה וויזואליה</li>
+                        <li>תכנון ותזמון תכנים</li>
+                        <li>שמירה על אותנטיות</li>
+                    </ul>
+                    <a href="contact.html" class="course-btn">פרטים נוספים</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="course-private.jpg" alt="ליווי פרטני" class="course-image">
+                <div class="course-content">
+                    <h2>ליווי פרטני 1:1</h2>
+                    <p>ליווי אחד על אחד מותאם אישית למי שרוצה צעדים ממוקדים והתאמה מדויקת לצרכים.</p>
+                    <ul class="course-features">
+                        <li>פגישות זום אישיות</li>
+                        <li>תכנית לימוד מותאמת אישית</li>
+                        <li>תמיכה ישירה בווטסאפ</li>
+                        <li>התאמה מלאה לקצב שלך</li>
+                    </ul>
+                    <a href="contact.html" class="course-btn">בואו נדבר</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 לבלבינה - כל הזכויות שמורות | פנינה קריוף</p>
+    </footer>
+</body>
+</html>
