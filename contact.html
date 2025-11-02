@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר - לבלבינה</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover, nav a.active {
+            text-decoration: underline;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            color: #933ec7;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .contact-section h2 {
+            color: #337cdc;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #933ec7, #5f5ad7);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(147, 62, 199, 0.4);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p {
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            background: white;
+            color: #933ec7;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background: #f86173;
+            color: white;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(147, 62, 199, 0.05), rgba(30, 149, 223, 0.05));
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .info-box p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav a { display: block; margin: 0.8rem 0; }
+            .contact-links { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="לבלבינה" class="logo">
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="about.html">אודות</a>
+            <a href="services.html">שירותים</a>
+            <a href="courses.html">קורסים</a>
+            <a href="contact.html" class="active">צור קשר</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>בואו נתחבר</h1>
+            <p>רוצים לראות איך הבינה המלאכותית יכולה לשרת אתכם?</p>
+        </div>
+
+        <div class="contact-section">
+            <h2>דרכי יצירת קשר</h2>
+            
+            <div class="contact-links">
+                <a href="https://did.li/cXyx5" target="_blank" class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>קבוצת וואטסאפ</h3>
+                    <p>הצטרפו לקהילה האינטימית והמעוררת השראה שלי</p>
+                </a>
+
+                <a href="https://linktr.ee/levlabina" target="_blank" class="contact-card">
+                    <div class="contact-icon">🌿</div>
+                    <h3>לינקטרי</h3>
+                    <p>כל ההדרכות, הקורסים והקישורים במקום אחד</p>
+                </a>
+
+                <a href="mailto:pninakar@gmail.com" class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>מייל</h3>
+                    <p>כתבו לי ישירות למייל</p>
+                </a>
+            </div>
+
+            <div class="info-box">
+                <p><strong>אני כאן כדי להראות לכם שזה אפשרי.</strong></p>
+                <p>בכל מקרה – כתבו לי. דברו איתי. אני פה כדי ללוות אתכם בדרך.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 לבלבינה - כל הזכויות שמורות | פנינה קריוף</p>
+        <p>הטמעת כלי בינה לבעלי קליניקות, מטפלים ומנחים להתפתחות אישית</p>
+    </footer>
+</body>
+</html>
