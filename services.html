@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שירותים - לבלבינה</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover, nav a.active {
+            text-decoration: underline;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-header h1 {
+            color: #933ec7;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #933ec7, #1e95df);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(147, 62, 199, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h2 {
+            color: #337cdc;
+            font-size: 1.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-section {
+            background: linear-gradient(135deg, #933ec7, #5f5ad7);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .highlight-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #933ec7;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background: #f86173;
+            color: white;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            nav a { display: block; margin: 0.8rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="לבלבינה" class="logo">
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="about.html">אודות</a>
+            <a href="services.html" class="active">שירותים</a>
+            <a href="courses.html">קורסים</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>מה אני מציעה?</h1>
+            <p>שילוב ייחודי בין עולמות הריפוי, ההעצמה והאינטואיציה – לבין עולם הטכנולוגיה</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h2>בינה מלאכותית נגישה</h2>
+                <p>אני מסבירה איך לעבוד עם GPT ובינה מלאכותית בשפה פשוטה, ללא ז'רגון טכני. רק כלים שעובדים בשבילכם.</p>
+                <p><strong>למי זה מתאים:</strong> מטפלים, מאמנים ויוצרים שרוצים להבין AI בלי לפחד</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h2>יצירה דיגיטלית</h2>
+                <p>למדו ליצור תכנים, גרפיקה וחומרים ויזואליים בלחיצת כפתור – בלי להיות מעצבים מקצועיים.</p>
+                <p><strong>מה תלמדו:</strong> כלי עיצוב, יצירת תמונות עם AI, ועריכת וידאו פשוטה</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h2>אוטומציות חכמות</h2>
+                <p>איך לחסוך זמן ולייעל את העבודה שלכם עם כלים טכנולוגיים שמשרתים אתכם – לא להיפך.</p>
+                <p><strong>דוגמאות:</strong> תזמון פוסטים, ניהול לקוחות, תשלומים אוטומטיים</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💝</div>
+                <h2>ליווי אישי ורגיש</h2>
+                <p>אני מגיעה מהעולם שלכם. מבינה את הדילמות, את הרגישות ואת הנטייה לדחות את הטכני לטובת האנושי.</p>
+                <p><strong>הגישה שלי:</strong> בלי לחץ, בלי לוותר על מי שאתם באמת</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌟</div>
+                <h2>מעבר רך לעידן החדש</h2>
+                <p>אני פותחת שער לעולם חדש ומחזיקה לכם את היד עד שתעברו אותו. בלי לחץ, בלי לוותר על מי שאתם.</p>
+                <p><strong>התוצאה:</strong> אתם נשארים נאמנים לעצמכם, ובמקביל רלוונטיים ויעילים</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h2>קורסים והדרכות</h2>
+                <p>תכנים מעשיים, מובנים ומותאמים אישית – כי כל אחד לומד אחרת.</p>
+                <p><strong>פורמטים:</strong> קורסים מוקלטים, הדרכות חיות, וליווי 1:1</p>
+            </div>
+        </div>
+
+        <div class="highlight-section">
+            <h2>מוכנים להתחיל?</h2>
+            <p>בואו נראה איך אני יכולה לעזור לכם להתחבר לעולם הטכנולוגיה בדרך שמרגישה נכונה</p>
+            <a href="contact.html" class="cta-btn">צרו קשר</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 לבלבינה - כל הזכויות שמורות | פנינה קריוף</p>
+    </footer>
+</body>
+</html>
