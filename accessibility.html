@@ -1,211 +1,245 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הצהרת נגישות - לבלבינה</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצהרת נגישות - לבלבינה</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
-            line-height: 1.6;
-        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #2c3e50;
+            line-height: 1.8;
+        }
 
-        header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
+        header {
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
 
-        .logo {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 1rem;
-        }
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
 
-        nav {
-            margin-top: 1rem;
-        }
+        nav {
+            margin-top: 1rem;
+        }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
 
-        nav a:hover, nav a.active {
-            text-decoration: underline;
-            transform: translateY(-2px);
-        }
+        nav a:hover, nav a.active {
+            text-decoration: underline;
+            transform: translateY(-2px);
+        }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
 
-        .about-hero {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, rgba(147, 62, 199, 0.05), rgba(30, 149, 223, 0.05));
-            border-radius: 30px;
-            margin-bottom: 3rem;
-        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-        .profile-image {
-            max-width: 250px;
-            border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(147, 62, 199, 0.3);
-            margin-bottom: 2rem;
-        }
+        .page-header h1 {
+            color: #933ec7;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-        h1 {
-            color: #933ec7;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+        .page-header .date {
+            color: #666;
+            font-size: 1.1rem;
+        }
 
-        h2 {
-            color: #337cdc;
-            font-size: 2.2rem;
-            margin: 3rem 0 1.5rem;
-        }
+        .content-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
 
-        .tagline {
-            font-size: 1.5rem;
-            color: #f86173;
-            font-weight: bold;
-            margin-bottom: 2rem;
-        }
+        .content-section h2 {
+            color: #337cdc;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-right: 4px solid #933ec7;
+            padding-right: 1rem;
+        }
 
-        .content-section {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
+        .content-section h3 {
+            color: #5f5ad7;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
 
-        .content-section p {
-            font-size: 1.2rem;
-            line-height: 1.9;
-            margin-bottom: 1.5rem;
-            color: #555;
-        }
+        .content-section p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
 
-        .content-section strong {
-            color: #933ec7;
-        }
+        .content-section ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
 
-        .journey {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .content-section li {
+            color: #555;
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
 
-        .journey-item {
-            background: linear-gradient(135deg, #933ec7, #5f5ad7);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-        }
+        .contact-info {
+            background: linear-gradient(135deg, rgba(147, 62, 199, 0.1), rgba(30, 149, 223, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
 
-        .journey-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        /* פתרון הבעיה מהשיחה הקודמת שלנו */
-        .content-section .journey .journey-item p {
-            color: white;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-        }
+        .contact-info h3 {
+            color: #933ec7;
+            margin-bottom: 1rem;
+        }
 
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2.5rem;
-  S          margin-top: 4rem;
-        }
-        
-        /* הוספת סגנון לקישורים בפוטר */
-        footer a {
-            color: white;
-            text-decoration: underline;
-        }
+        .contact-info p {
+            color: #333;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
 
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            nav a { display: block; margin: 0.8rem 0; }
-        }
-    </style>
+        .contact-info a {
+            color: #337cdc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #933ec7;
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight p {
+            color: #856404;
+            margin: 0;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.8rem 0;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="לב-לבינה" class="logo">
-        <nav>
-            <a href="index.html">בית</a>
-            <a href="about.html">אודות</a>
-            <a href="services.html">שירותים</a>
-            <a href="courses.html">קורסים</a>
-            <a href="contact.html">צור קשר</a>
-        </nav>
-    </header>
+    <header>
+        <img src="logo.png" alt="לבלבינה" class="logo">
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="about.html">אודות</a>
+            <a href="services.html">שירותים</a>
+            <a href="courses.html">קורסים</a>
+            <a href="contact.html">צור קשר</a>
+            <a href="accessibility.html" class="active">נגישות</a>
+        </nav>
+    </header>
 
-        <div class="container">
-        <div class="content-section">
-            <h1>הצהרת נגישות</h1>
-            <p><em>הצהרת הנגישות עודכנה בתאריך 22-09-2025</em></p>
-            
-            <p><strong>לבלבינה:</strong> הטמעת כלי בינה לבעלי קליניקות, מטפלים ומנחים להתפתחות אישית.
-                אנו פועלים רבות על מנת להנגיש את הארגון ואת אתר האינטרנט שלנו לאנשים עם מוגבלות על מנת לקדם שוויון זכויות ושקיפות כלפי אנשים עם מוגבלות.
-            </p>
+    <div class="container">
+        <div class="page-header">
+            <h1>הצהרת נגישות</h1>
+            <p class="date">הצהרת הנגישות עודכנה בתאריך: 02/09/2025</p>
+        </div>
 
-            <h2>מהות אתר אינטרנט נגיש</h2>
-            <p>אתר אינטרנט נגיש, הינו אתר המאפשר לאדם עם מוגבלות, לגלוש באותה רמת יעילות והנאה כגולשים אחרים, תוך שימוש ביכולות המערכת עליה הוא פועל ובאמצעות טכטנולוגיות מסייעות לנגישות.</p>
+        <div class="content-section">
+            <h2>לבלבינה</h2>
+            <p><strong>הטמעת כלי בינה לבעלי קליניקות, מטפלים ומנחים להתפתחות אישית</strong></p>
+            
+            <p>אנו פועלים רבות על מנת להנגיש את הארגון ואת אתר האינטרנט שלנו לאנשים עם מוגבלות על מנת לקדם שוויון זכויות ושקיפות כלפי אנשים עם מוגבלות.</p>
 
-            <h2>ביצוע התאמות הנגישות באתר האינטרנט</h2>
-            <p>התאמות הנגישות באתר בוצעו בהתאם לסימן ג': שירותי האינטרנט בתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות) התשע"ג 2013, לתקן הישראלי ת"י 5568 המבוסס על הנחיות 2.0 WCAG, האתר הונגש לרמה ובכפוף לשינויים והתאמות שבוצעו במסמך התקן הישראלי.</p>
+            <h3>מהות אתר אינטרנט נגיש</h3>
+            <p>אתר אינטרנט נגיש, הינו אתר המאפשר לאדם עם מוגבלות, לגלוש באותה רמת יעילות והנאה כגולשים אחרים, תוך שימוש ביכולות המערכת עליה הוא פועל ובאמצעות טכנולוגיות מסייעות לנגישות.</p>
 
-            <h2>הצהרה על עמידה חלקית בתקן במקרה של תכני צד ג' (אם קיימים)</h2>
-            <p>בחלק מדפי האתר הבאים נגישות הדף תלויה בתכנים שאינם של הארגון (תכני צד ג') ולכן אנחנו מצהירים על עמידה חלקית בתקן עבור דפים אילו.</p>
+            <h3>ביצוע התאמות הנגישות באתר האינטרנט</h3>
+            <p>התאמות נגישות באתר בוצעו בהתאם לסימן ג': שירותי האינטרנט בתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013, לתקן הישראלי ת"י 5568, המבוסס על הנחיות WCAG 2.0, ובכפוף לשינויים והתאמות שבוצעו במסמך התקן הישראלי.</p>
 
-            <h2>ישימות מיטבית לנגישות באתר האינטרנט</h2>
-            <p>באתר אינטרנט זה, ניתן לגלוש בצורה מיטבית ונגישה באמצעות הדפדפנים הנפוצים ומומלץ להשתמש בדפדפנים הבאים:</p>
-            <ul>
-                <li>Chrome</li>
-                <li>Firefox</li>
-            </ul>
+            <div class="highlight">
+                <p><strong>הצהרה על עמידה חלקית בתקן במקרה של תכני צד ג' (אם קיימים):</strong><br>
+                בחלק מדפי האתר הבאים נגישות הדף תלויה בתכנים שאינם של הארגון (תכני צד ג'), ולכן אנחנו מצהירים על עמידה חלקית בתקן עבור דפים אילו.</p>
+            </div>
 
-            <h2>דרכי פניה לבקשות, תקלות נגישות והצעות לשיפור:</h2>
-            <p>במידה ומצאתם באתר האינטרנט בעיה בנושא הנגישות או שהנכם זקוקים עזרה, אתם מוזמנים לפנות אלינו דרך רכז הנגישות של הארגון:</p>
-            
-            <p style="font-weight: bold; color: #333;">פנינה קריוף</p>
-            <p>טלפון: <a href="tel:+9720548383451">9720548383451</a></p>
-            <p>דוא"ל: <a href="mailto:pninakar@gmail.com">pninakar@gmail.com</a></p>
-        </div>
-    </div>
-        <footer>
-        <p>
-            &copy; 2025 לבלבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html">הצהרת נגישות</a>
-        </p>
-    </footer>
+            <h3>ישימות מיטבית לנגישות באתר האינטרנט</h3>
+            <p>באתר אינטרנט זה, ניתן לגלוש בצורה מיטבית ונגישה באמצעות הדפדפנים הנפוצים ומומלץ להשתמש בדפדפנים הבאים:</p>
+            <ul>
+                <li>Google Chrome</li>
+                <li>Mozilla Firefox</li>
+                <li>Microsoft Edge</li>
+                <li>Safari</li>
+            </ul>
+
+            <div class="contact-info">
+                <h3>דרכי פניה לבקשות, תקלות נגישות והצעות לשיפור</h3>
+                <p>במידה ומצאתם באתר האינטרנט בעיה בנושא הנגישות או שהנכם זקוקים עזרה, אתם מוזמנים לפנות אלינו דרך רכז הנגישות של הארגון:</p>
+                
+                <p><strong>שם:</strong> פנינה קריוף</p>
+                <p><strong>טלפון:</strong> 972-054-8383451</p>
+                <p><strong>דוא"ל:</strong> <a href="mailto:pninakar@gmail.com">pninakar@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 לבלבינה - כל הזכויות שמורות | פנינה קריוף</p>
+        <p>הטמעת כלי בינה לבעלי קליניקות, מטפלים ומנחים להתפתחות אישית</p>
+    </footer>
 </body>
-</html> 
+</html>
