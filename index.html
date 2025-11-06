@@ -17,7 +17,15 @@
             color: #2c3e50;
             line-height: 1.6;
         }
-
+/* עיצוב תמונת הפרופיל בהידר */
+.hero-profile-image {
+    width: 150px; /* גודל התמונה */
+    height: 150px;
+    border-radius: 50%; /* הופך את התמונה לעיגול */
+    margin-bottom: 1.5rem; /* ריווח מתחת לכותרת */
+    /* מוסיף הילה לבנה וצל קטן */
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.3); 
+}
         header {
     background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
     padding: 1rem 2rem;
@@ -45,7 +53,7 @@
             color: white;
             text-decoration: none;
             margin: 0 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
             display: inline-block;
@@ -210,11 +218,12 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>מחברת בין עולמות</h1>
-        <p>טיפול. טכנולוגיה. טרנספורמציה.</p>
-        <a href="services.html" class="cta-button">בואו נתחיל</a>
-    </section>
+    <section class="hero" id="home">
+    <img src="pnina-profile.jpg" alt="פנינה קריוף - לבלבינה" class="hero-profile-image">
+    <h1>מחברת בין עולמות</h1>
+    <p>טיפול. טכנולוגיה. טרנספורמציה.</p>
+    <a href="services.html" class="cta-button">בואו נתחיל</a>
+</section>
 
     <div class="container">
         <div class="intro">
