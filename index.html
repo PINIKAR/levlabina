@@ -21,6 +21,7 @@
 .hero-profile-image {
     width: 150px; /* גודל התמונה */
     height: 150px;
+    object-fit: cover; /* הוסף את השורה הזו לתיקון העיוות */
     border-radius: 50%; /* הופך את התמונה לעיגול */
     margin-bottom: 1.5rem; /* ריווח מתחת לכותרת */
     /* מוסיף הילה לבנה וצל קטן */
@@ -33,6 +34,10 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 
             z-index: 100;
+            position: sticky; /* הופך את האלמנט לדביק */
+    top: 0;           /* מצמיד אותו למעלה המסך */
+    z-index: 1000;    /* מוודא שהוא תמיד מעל תוכן אחר */
+}
         }
 
         .logo {
