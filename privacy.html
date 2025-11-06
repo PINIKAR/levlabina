@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדיניות פרטיות - לבלבינה</title>
+    <link rel="canonical" href="https://pnina-karayoff.com/privacy.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover, nav a.active {
+            text-decoration: underline;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            color: #933ec7;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .content-section h2 {
+            color: #337cdc;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-right: 4px solid #933ec7;
+            padding-right: 1rem;
+        }
+
+        .content-section p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .content-section ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        .content-section li {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .notice-box {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .notice-box p {
+            color: #856404;
+            margin: 0.5rem 0;
+        }
+
+        .notice-box strong {
+            color: #533f03;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(147, 62, 199, 0.1), rgba(30, 149, 223, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-right: 4px solid #933ec7;
+        }
+
+        .highlight-box h3 {
+            color: #933ec7;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .highlight-box p {
+            color: #333;
+            margin: 0.5rem 0;
+        }
+
+        .highlight-box a {
+            color: #337cdc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .highlight-box a:hover {
+            color: #933ec7;
+            text-decoration: underline;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, rgba(147, 62, 199, 0.05), rgba(30, 149, 223, 0.05));
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-right: 3px solid #933ec7;
+        }
+
+        .info-card h3 {
+            color: #337cdc;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-card p {
+            color: #555;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.8rem 0;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="לבלבינה" class="logo">
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="about.html">אודות</a>
+            <a href="services.html">שירותים</a>
+            <a href="courses.html">קורסים</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>מדיניות פרטיות</h1>
+            <p class="subtitle">אתר pnina-karayoff.com</p>
+        </div>
+
+        <div class="content-section">
+            <div class="notice-box">
+                <p><strong>חשוב לדעת:</strong></p>
+                <p>אנו מכבדים את פרטיותכם ומחויבים לשמור על המידע האישי שלכם. מדיניות זו מפרטת כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם.</p>
+            </div>
+
+            <h2>1. איזה מידע נאסף</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📊 מצב נוכחי</h3>
+                    <p>נכון להיום האתר <strong>אינו אוסף</strong> מידע אישי מהמשתמשים ואינו מאפשר השארת פרטי קשר באתר.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📧 יצירת קשר</h3>
+                    <p>ניתן ליצור קשר באמצעות המייל או הטלפון המופיעים באתר בלבד.</p>
+                </div>
+            </div>
+
+            <h2>2. שימוש עתידי במידע</h2>
+            <p>ייתכן שבעתיד יתווספו לאתר:</p>
+            <ul>
+                <li>אפשרויות להשארת פרטים וטפסי יצירת קשר</li>
+                <li>שימוש בקוקיות (Cookies) לצרכים טכנולוגיים</li>
+                <li>מערכות לשיפור חווית המשתמש</li>
+                <li>כלי ניתוח סטטיסטי (Google Analytics וכדומה)</li>
+            </ul>
+            <p><strong>במקרה כזה, מדיניות הפרטיות תעודכן בהתאם ותפורסם באתר.</strong></p>
+
+            <h2>3. מסירת מידע לצד שלישי</h2>
+            <p>נכון להיום, <strong>לא נמסר מידע לצדדים שלישיים</strong>.</p>
+            <p>במידה ובעתיד יהיה צורך במסירת מידע לספקי שירות (לדוגמה: מערכות דיוור, שירותי תשלום), הדבר ייעשה אך ורק:</p>
+            <ul>
+                <li>עם ספקים אמינים ובעלי אישורי אבטחת מידע</li>
+                <li>למטרות הקשורות ישירות לשירות שאתם מבקשים</li>
+                <li>תוך שמירה קפדנית על הפרטיות והחוק</li>
+            </ul>
+
+            <h2>4. זכויותיכם</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🔍 צפייה במידע</h3>
+                    <p>זכותכם לדעת אילו נתונים נשמרים עליכם</p>
+                </div>
+                <div class="info-card">
+                    <h3>✏️ תיקון מידע</h3>
+                    <p>זכותכם לבקש תיקון מידע שגוי</p>
+                </div>
+                <div class="info-card">
+                    <h3>🗑️ מחיקת מידע</h3>
+                    <p>זכותכם לבקש מחיקת המידע שלכם</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚫 התנגדות</h3>
+                    <p>זכותכם להתנגד לשימושים מסוימים במידע</p>
+                </div>
+            </div>
+
+            <h2>5. קישורים חיצוניים</h2>
+            <p>ייתכן שבאתר יש קישורים לאתרים חיצוניים (כגון רשתות חברתיות, אתרי תשלום וכו').</p>
+            <p><strong>אין לנו אחריות</strong> על מדיניות הפרטיות הנהוגה באותם אתרים. אנו ממליצים לקרוא את מדיניות הפרטיות של כל אתר חיצוני אליו תיגשו.</p>
+
+            <div class="highlight-box">
+                <h3>📞 פנייה בנושאי פרטיות</h3>
+                <p>לכל שאלה בנושא פרטיות, מחיקת מידע, או בירור, ניתן לפנות:</p>
+                <p>📧 <strong>מייל:</strong> <a href="mailto:pninakar@gmail.com">pninakar@gmail.com</a></p>
+                <p>📞 <strong>טלפון:</strong> <a href="tel:+972548383451">054-8383451</a></p>
+                <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;">
+                    נעשה כל שביכולתנו להשיב בהקדם האפשרי ולטפל בפנייתכם בצורה מקצועית ומכבדת.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <p style="text-align: center; color: #933ec7; font-weight: 600;">
+                מדיניות פרטיות זו מעודכנת נכון ליום: נובמבר 2025
+            </p>
+            <p style="text-align: center; color: #666; margin-top: 1rem;">
+                אנו שומרים לעצמנו את הזכות לעדכן מדיניות זו מעת לעת. שינויים מהותיים יפורסמו באתר.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            &copy; 2025 לבלבינה - כל הזכויות שמורות | פנינה קריוף | 
+            <a href="accessibility.html">הצהרת נגישות</a> | 
+            <a href="terms.html">תקנון</a> | 
+            <a href="privacy.html">מדיניות פרטיות</a>
+        </p>
+    </footer>
+</body>
+</html>
