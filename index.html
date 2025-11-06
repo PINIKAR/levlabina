@@ -4,51 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>לב-לבינה - מחברת בין עולמות</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="canonical" href="https://pnina-karayoff.com/">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-<link rel="canonical" href="https://pnina-karayoff.com/">
-       body {
-    font-family: 'Assistant', 'Heebo', 'Rubik', Arial, sans-serif;
+
+        body {
+            /* שינוי הפונט לפונט נקי */
+            font-family: 'Assistant', sans-serif; 
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             color: #2c3e50;
             line-height: 1.6;
         }
-/* עיצוב תמונת הפרופיל בהידר */
-.hero-profile-image {
-    width: 150px; /* גודל התמונה */
-    height: 150px;
-    object-fit: cover; /* הוסף את השורה הזו לתיקון העיוות */
-    border-radius: 50%; /* הופך את התמונה לעיגול */
-    margin-bottom: 1.5rem; /* ריווח מתחת לכותרת */
-    /* מוסיף הילה לבנה וצל קטן */
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.3); 
-}
+
+        /* עיצוב תמונת הפרופיל בהידר */
+        .hero-profile-image {
+            width: 150px; /* גודל התמונה */
+            height: 150px;
+            object-fit: cover; /* תיקון העיוות */
+            border-radius: 50%; /* הופך את התמונה לעיגול */
+            margin-bottom: 1.5rem; /* ריווח מתחת לכותרת */
+            /* מוסיף הילה לבנה וצל קטן */
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.3); 
+        }
+
         header {
-    background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
-    padding: 1rem 2rem;
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 1rem 2rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            
+            /* הפיכת ההידר ל-STICKY */
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+        }
 
-            z-index: 100;
-            position: sticky; /* הופך את האלמנט לדביק */
-    top: 0;           /* מצמיד אותו למעלה המסך */
-    z-index: 1000;    /* מוודא שהוא תמיד מעל תוכן אחר */
-}
+        .logo-container {
+            display: inline-block;
         }
 
         .logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
+            max-width: 100px; /* צמצום גודל הלוגו */
+            height: auto;
+            margin-bottom: 0;
+            background: white; /* רקע לבן ללוגו - נשמר */
+            padding: 0.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
         nav {
             margin-top: 1rem;
@@ -57,9 +68,9 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1.5rem;
+            margin: 0 1rem;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem; /* גודל פונט קצת יותר קטן */
             transition: all 0.3s ease;
             display: inline-block;
         }
@@ -77,23 +88,8 @@
             position: relative;
             overflow: hidden;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(248, 97, 115, 0.3), transparent);
-            border-radius: 50%;
-            top: -100px;
-            right: -100px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
+        
+        /* ... קוד אנימציות Hero ... */
 
         .hero h1 {
             font-size: 3.5rem;
@@ -167,17 +163,24 @@
             margin-top: 4rem;
         }
 
+        /* עיצוב עבור קוביות השירותים שהפכנו ללחיצות */
         .feature-card {
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* הוספת אפקט מעבר */
+        }
+        
+        .feature-card a { /* מוודא שכל קישור בתוך הכרטיס אינו מקבל קו תחתון */
+            text-decoration: none;
+            color: inherit;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05); /* הגדלה קלה בריחוף */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
         .feature-icon {
@@ -213,22 +216,23 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="לב-לבינה" class="logo">
+        <a href="/">
+            <img src="logo.png" alt="לב-לבינה" class="logo">
+        </a>
         <nav>
-            <a href="index.html" class="active">בית</a>
             <a href="about.html">אודות</a>
-            <a href="services.html" class="service-link">
+            <a href="services.html">שירותים</a>
             <a href="courses.html">קורסים</a>
             <a href="contact.html">צור קשר</a>
         </nav>
     </header>
 
     <section class="hero" id="home">
-    <img src="pnina-profile.jpg" alt="פנינה קריוף - לבלבינה" class="hero-profile-image">
-    <h1>מחברת בין עולמות</h1>
-    <p>טיפול. טכנולוגיה. טרנספורמציה.</p>
-    <a href="services.html" class="cta-button">בואו נתחיל</a>
-</section>
+        <img src="pnina-profile.jpg" alt="פנינה קריוף - לבלבינה" class="hero-profile-image">
+        <h1>מחברת בין עולמות</h1>
+        <p>טיפול. טכנולוגיה. טרנספורמציה.</p>
+        <a href="services.html" class="cta-button">בואו נתחיל</a>
+    </section>
 
     <div class="container">
         <div class="intro">
@@ -238,32 +242,39 @@
         </div>
 
         <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🤖</div>
-                <h3>בינה מלאכותית</h3>
-                <p>כלים פשוטים ונגישים לעבודה עם AI</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎨</div>
-                <h3>יצירה דיגיטלית</h3>
-                <p>תכנים וגרפיקה בלחיצת כפתור</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">💝</div>
-                <h3>ליווי אישי</h3>
-                <p>בדרך שמרגישה נכונה ורגישה</p>
-            </div>
+            <a href="services.html" style="text-decoration: none;">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>בינה מלאכותית</h3>
+                    <p>כלים פשוטים ונגישים לעבודה עם AI</p>
+                </div>
+            </a>
+            
+            <a href="services.html" style="text-decoration: none;">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>יצירה דיגיטלית</h3>
+                    <p>תכנים וגרפיקה בלחיצת כפתור</p>
+                </div>
+            </a>
+            
+            <a href="services.html" style="text-decoration: none;">
+                <div class="feature-card">
+                    <div class="feature-icon">💝</div>
+                    <h3>ליווי אישי</h3>
+                    <p>בדרך שמרגישה נכונה ורגישה</p>
+                </div>
+            </a>
         </div>
     </div>
 
     <footer>
-       <footer>
-    <p>
-        &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-        <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-        <a href="terms.html" style="color: white;">תקנון</a> | 
-        <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
-    </p>
-</footer>
+        <p>
+            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
+            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
+            <a href="terms.html" style="color: white;">תקנון</a> | 
+            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
+        </p>
+    </footer>
 </body>
 </html>
