@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אודות - לב-לבינה</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -12,31 +15,34 @@
         }
 
         body {
-            body {
-    font-family: 'Assistant', 'Heebo', 'Rubik', Arial, sans-serif;
+            /* שינוי הפונט לפונט נקי */
+            font-family: 'Assistant', sans-serif; 
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             color: #2c3e50;
             line-height: 1.6;
         }
 
-header {
-    background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
-    padding: 1rem 2rem;
+        header {
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 1rem 2rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-
-            z-index: 100;
+            
+            /* הפיכת ההידר ל-STICKY */
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; /* מוודא שהוא תמיד מעל תוכן אחר */
         }
 
-.logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
+        .logo {
+            max-width: 100px; /* צמצום גודל הלוגו */
+            height: auto;
+            margin-bottom: 0;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
         nav {
             margin-top: 1rem;
@@ -45,9 +51,9 @@ header {
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1.5rem;
-            font-weight: 600;
-            font-size: 1.1rem;
+            margin: 0 1rem;
+            font-weight: 700;
+            font-size: 1rem;
             transition: all 0.3s ease;
             display: inline-block;
         }
@@ -76,6 +82,7 @@ header {
             border-radius: 50%;
             box-shadow: 0 10px 30px rgba(147, 62, 199, 0.3);
             margin-bottom: 2rem;
+            object-fit: cover; /* תיקון עיוות התמונה */
         }
 
         h1 {
@@ -109,16 +116,11 @@ header {
             font-size: 1.2rem;
             line-height: 1.9;
             margin-bottom: 1.5rem;
-
         }
 
         .content-section strong {
             color: #933ec7;
         }
-.content-section .journey-item p {
-            color: white;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
 
         .journey {
             display: grid;
@@ -141,17 +143,17 @@ header {
             margin-bottom: 1rem;
         }
         
-.journey-item p {
-            color: white !important;
-}
- 	 	 	 	.journey-item strong {
- 	 	 	 	 	color: white !important; /* תיקון: מחזיר את הצבע ללבן גם כשיש הדגשה */
- 	 	 	 	 	font-weight: 700;
- 	 	 	 	}
-.journey-item p {
-    line-height: 1.4 !important; /* מגדיל את הריווח בין השורות בתוך הקוביות */
-    font-size: 1.15rem; /* מעט גדול יותר לקריאות טובה */
-}
+        .journey-item p {
+            color: white !important;
+            line-height: 1.4 !important; /* מגדיל ריווח שורות בקוביות */
+            font-size: 1.15rem; /* גודל פונט קצת יותר גדול */
+        }
+
+        .journey-item strong {
+            color: white !important; /* תיקון: מחזיר את הצבע ללבן גם כשיש הדגשה */
+            font-weight: 700;
+        }
+
         footer {
             background: #2c3e50;
             color: white;
@@ -168,9 +170,10 @@ header {
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="לב-לבינה" class="logo">
+        <a href="/">
+            <img src="logo.png" alt="לב-לבינה" class="logo">
+        </a>
         <nav>
-            <a href="index.html">בית</a>
             <a href="about.html" class="active">אודות</a>
             <a href="services.html">שירותים</a>
             <a href="courses.html">קורסים</a>
@@ -204,30 +207,30 @@ header {
             <h2>הרקע שלי</h2>
             <div class="journey">
                 <div class="journey-item">
-    <h3>🎓 השכלה</h3>
-    <p>
-        <strong>AI Master</strong> (עדן ביבס)<br>
-        <strong>Prompt Engineering</strong> מתקדם (יצירת הנחיות)<br>
-        <strong>אסטרטגיית AI</strong> לייעול תהליכים עסקיים<br>
-        <strong>שליטה בכלי Generative AI</strong> (תוכן חזותי וטקסטואלי)
-    </p>
-</div>
-<div class="journey-item">
-    <h3>💻 ניסיון טכנולוגי</h3>
-    <p>
-        <strong>פיתוח יישומי AI</strong>&#8207; (MVP)<br>
-        <strong>אוטומציה עסקית</strong> (Workflow Automation)<br>
-        <strong>יצירת מדיה חזותית</strong> באמצעות מודלי AI גנרטיביים
-    </p>
-</div>
-<div class="journey-item">
-    <h3>🌟 עולמות הריפוי</h3>
-    <p>
-        <strong>+10 שנות ניסיון</strong><br>
-        ב-NLP, טארוט, נומרולוגיה,<br>
-        ועוד שיטות ריפוי הוליסטיות
-    </p>
-</div>
+                    <h3>🎓 השכלה</h3>
+                    <p>
+                        <strong>AI Master</strong> (עדן ביבס)<br>
+                        <strong>Prompt Engineering</strong> מתקדם (יצירת הנחיות)<br>
+                        <strong>אסטרטגיית AI</strong> לייעול תהליכים עסקיים<br>
+                        <strong>שליטה בכלי Generative AI</strong> (תוכן חזותי וטקסטואלי)
+                    </p>
+                </div>
+                <div class="journey-item">
+                    <h3>💻 ניסיון טכנולוגי</h3>
+                    <p>
+                        <strong>פיתוח יישומי AI</strong>&#8207; (MVP)<br>
+                        <strong>אוטומציה עסקית</strong> (Workflow Automation)<br>
+                        <strong>יצירת מדיה חזותית</strong> באמצעות מודלי AI גנרטיביים
+                    </p>
+                </div>
+                <div class="journey-item">
+                    <h3>🌟 עולמות הריפוי</h3>
+                    <p>
+                        <strong>+10 שנות ניסיון</strong><br>
+                        ב-NLP, טארוט, נומרולוגיה,<br>
+                        ועוד שיטות ריפוי הוליסטיות
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -240,13 +243,12 @@ header {
     </div>
 
     <footer>
-<footer>
-    <p>
-        &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-        <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-        <a href="terms.html" style="color: white;">תקנון</a> | 
-        <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
-    </p>
-</footer>
+        <p>
+            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
+            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
+            <a href="terms.html" style="color: white;">תקנון</a> | 
+            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
+        </p>
+    </footer>
 </body>
 </html>
