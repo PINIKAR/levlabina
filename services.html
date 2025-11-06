@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>שירותים - לב-לבינה</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -12,31 +15,34 @@
         }
 
         body {
-            body {
-    font-family: 'Assistant', 'Heebo', 'Rubik', Arial, sans-serif;
+            /* שימוש בפונט הנקי והקריא */
+            font-family: 'Assistant', sans-serif; 
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             color: #2c3e50;
             line-height: 1.6;
         }
 
         header {
-    background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
-    padding: 1rem 2rem;
+            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            padding: 1rem 2rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-
-            z-index: 100;
+            
+            /* הפיכת ההידר ל-STICKY */
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
         }
 
         .logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
+            max-width: 100px; /* גודל מוקטן כדי להתאים ל-Sticky Header */
+            height: auto;
+            margin-bottom: 0;
+            background: white;
+            padding: 0.5rem; 
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
         nav {
             margin-top: 1rem;
@@ -45,9 +51,9 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1.5rem;
-            font-weight: 600;
-            font-size: 1.1rem;
+            margin: 0 1rem; /* צמצום המרווחים בתפריט */
+            font-weight: 700; 
+            font-size: 1rem;
             transition: all 0.3s ease;
             display: inline-block;
         }
@@ -185,9 +191,10 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="לב-לבינה" class="logo">
+        <a href="/">
+            <img src="logo.png" alt="לב-לבינה" class="logo">
+        </a>
         <nav>
-            <a href="index.html">בית</a>
             <a href="about.html">אודות</a>
             <a href="services.html" class="active">שירותים</a>
             <a href="courses.html">קורסים</a>
@@ -253,13 +260,12 @@
     </div>
 
     <footer>
-        <footer>
-    <p>
-        &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-        <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-        <a href="terms.html" style="color: white;">תקנון</a> | 
-        <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
-    </p>
-</footer>
+        <p>
+            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
+            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
+            <a href="terms.html" style="color: white;">תקנון</a> | 
+            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
+        </p>
+    </footer>
 </body>
 </html>
