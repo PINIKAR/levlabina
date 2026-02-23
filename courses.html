@@ -128,8 +128,11 @@
         .course-image {
             width: 100%;
             height: 250px;
-            object-fit: cover; /* מבטיח שהתמונה תמלא את המסגרת בלי עיוות, גם אם זה אומר חיתוך קל */
-            background: var(--sand-dark);
+            /* השינוי החשוב: object-fit: contain מבטיח שכל התמונה תופיע */
+            object-fit: contain;
+            /* הרקע מאחורי התמונה יהיה לבן, למקרה שיהיו שוליים */
+            background: var(--white); 
+            border-bottom: 1px solid var(--sand-bg); /* פס הפרדה עדין */
         }
 
         .new-badge {
