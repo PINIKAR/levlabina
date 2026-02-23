@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <script src="https://cdn.userway.org/widget.js" data-account="VflZTiJvoE"></script>
     <meta charset="UTF-8">
+    <script src="https://cdn.userway.org/widget.js" data-account="VflZTiJvoE"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>קורסים וכלים דיגיטליים - לב-לבינה</title>
     
@@ -128,7 +128,7 @@
         .course-image {
             width: 100%;
             height: 250px;
-            object-fit: cover;
+            object-fit: cover; /* מבטיח שהתמונה תמלא את המסגרת בלי עיוות, גם אם זה אומר חיתוך קל */
             background: var(--sand-dark);
         }
 
@@ -143,14 +143,7 @@
             font-weight: 700;
             font-size: 0.9rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            animation: pulse 2s infinite;
             z-index: 10; 
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
         }
 
         .course-content {
@@ -208,19 +201,10 @@
             box-shadow: 0 4px 15px rgba(156, 161, 143, 0.2);
         }
 
-        .course-btn.app-btn {
-            background-color: var(--deep-text); 
-            width: 100%; 
-        }
-
         .course-btn:hover {
             transform: translateY(-2px);
             background-color: var(--deep-text);
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .course-btn.app-btn:hover {
-            background-color: var(--sage-green);
         }
 
         footer {
@@ -286,38 +270,37 @@
         </div>
 
         <div class="courses-grid">
-            <div class="course-card" style="border: 2px solid var(--accent-gold); transform: scale(1.02); box-shadow: 0 15px 40px rgba(197, 160, 89, 0.15);">
-    <span class="new-badge" style="background: var(--accent-gold);">המסלול המואץ</span>
-    <img src="sprint-bg.jpg" alt="ספרינט הזיקוק" class="course-image">
-    <div class="course-content">
-        <h2 style="color: var(--accent-gold);">ספרינט הזיקוק ⚡</h2>
-        <p><strong>הופכים חזון למציאות דיגיטלית ב-4 שעות בלבד.</strong><br>
-        ליווי אישי מרוכז שבו נבנה לך את כל התשתית: אתר, לוגו, מערכת דיוור ואוטומציה – הכל מוכן לעבודה.</p>
-        <ul class="course-features">
-            <li>זיקוק מדויק של המותג והמסרים</li>
-            <li>בנייה טכנית מלאה (Hands-on)</li>
-            <li>הטמעת כלי AI לייעול העבודה</li>
-            <li>יציאה עם מוצר עובד ביד</li>
-        </ul>
-        <a href="https://sprint.pnina-karayoff.com/" target="_blank" class="course-btn" style="background: var(--accent-gold); width: 100%;">לכל הפרטים והרשמה &larr;</a>
-    </div>
-</div>
             
+            <div class="course-card" style="border: 2px solid var(--accent-gold); transform: scale(1.02); box-shadow: 0 15px 40px rgba(197, 160, 89, 0.15);">
+                <span class="new-badge" style="background: var(--accent-gold);">המסלול המואץ</span>
+                <img src="sprint.jpg" alt="ספרינט הזיקוק" class="course-image">
+                <div class="course-content">
+                    <h2 style="color: var(--accent-gold);">ספרינט הזיקוק ⚡</h2>
+                    <p><strong>הופכים חזון למציאות דיגיטלית ב-4 שעות בלבד.</strong><br>
+                    ליווי אישי מרוכז שבו נבנה לך את כל התשתית: אתר, לוגו, מערכת דיוור ואוטומציה – הכל מוכן לעבודה.</p>
+                    <ul class="course-features">
+                        <li>זיקוק מדויק של המותג והמסרים</li>
+                        <li>בנייה טכנית מלאה (Hands-on)</li>
+                        <li>הטמעת כלי AI לייעול העבודה</li>
+                        <li>יציאה עם מוצר עובד ביד</li>
+                    </ul>
+                    <a href="https://sprint.pnina-karayoff.com/" target="_blank" class="course-btn" style="background: var(--accent-gold); width: 100%;">לכל הפרטים והרשמה &larr;</a>
+                </div>
+            </div>
+
             <div class="course-card">
                 <span class="new-badge">חדש!</span>
                 <img src="prompt-book.jpg" alt="101 Prompt Book" class="course-image">
-                
                 <div class="course-content">
                     <h2>101 Prompt Book</h2>
                     <p><strong>האפליקציה שתשנה את איך שאת עובדת עם AI.</strong><br>
-                    במקום לשבור את הראש מה לכתוב ל-ChatGPT, קבלי ספרייה ענקית של הנחיות מוכנות ומקצועיות, מסודרות לפי קטגוריות.</p>
+                    במקום לשבור את הראש מה לכתוב ל-ChatGPT, קבלי ספרייה ענקית של הנחיות מוכנות ומקצועיות.</p>
                     <ul class="course-features">
                         <li>מאגר ענק של פרומפטים מוכנים</li>
                         <li>העתקה בלחיצת כפתור</li>
                         <li>מתאים לשיווק, כתיבה ואסטרטגיה</li>
-                        <li>גישה מיידית מכל מקום</li>
                     </ul>
-                    <a href="https://101promptbook.pnina-karayoff.com/" target="_blank" class="course-btn app-btn">לרכישה וכניסה מיידית &larr;</a>
+                    <a href="https://101promptbook.pnina-karayoff.com/" target="_blank" class="course-btn" style="background: var(--deep-text); width: 100%;">לרכישה מיידית &larr;</a>
                 </div>
             </div>
 
@@ -328,9 +311,8 @@
                     <p>קורס מקיף ללימוד עבודה עם בינה מלאכותית בעולם הטיפול וההתפתחות האישית.</p>
                     <ul class="course-features">
                         <li>עבודה מעשית עם GPT וכלי AI</li>
-                        <li>יצירת תכנים טיפוליים בעזרת AI</li>
-                        <li>אוטומציות חכמות לעסק שלך</li>
-                        <li>ליווי אישי לאורך הקורס</li>
+                        <li>יצירת תכנים טיפוליים</li>
+                        <li>אוטומציות חכמות לעסק</li>
                     </ul>
                     <a href="contact.html" class="course-btn">פרטים נוספים</a>
                 </div>
@@ -340,29 +322,13 @@
                 <img src="course-content.jpg" alt="יצירת תוכן חכם" class="course-image">
                 <div class="course-content">
                     <h2>יצירת תוכן חכם</h2>
-                    <p>איך ליצור תוכן איכותי ומשמעותי בעזרת כלים דיגיטליים - תוך שמירה על הקול האישי שלכם.</p>
+                    <p>איך ליצור תוכן איכותי ומשמעותי בעזרת כלים דיגיטליים - תוך שמירה על הקול האישי.</p>
                     <ul class="course-features">
                         <li>כתיבה יעילה עם AI</li>
                         <li>יצירת גרפיקה וויזואליה</li>
                         <li>תכנון ותזמון תכנים</li>
-                        <li>שמירה על אותנטיות</li>
                     </ul>
                     <a href="contact.html" class="course-btn">פרטים נוספים</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <img src="course-private.jpg" alt="ליווי פרטני" class="course-image">
-                <div class="course-content">
-                    <h2>ליווי פרטני 1:1</h2>
-                    <p>ליווי אחד על אחד מותאם אישית למי שרוצה צעדים ממוקדים והתאמה מדויקת לצרכים.</p>
-                    <ul class="course-features">
-                        <li>פגישות זום אישיות</li>
-                        <li>תכנית לימוד מותאמת אישית</li>
-                        <li>תמיכה ישירה בווטסאפ</li>
-                        <li>התאמה מלאה לקצב שלך</li>
-                    </ul>
-                    <a href="contact.html" class="course-btn">בואו נדבר</a>
                 </div>
             </div>
 
