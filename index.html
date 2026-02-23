@@ -20,8 +20,10 @@
         body {
             /* שינוי הפונט לפונט נקי */
             font-family: 'Assistant', sans-serif; 
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            /* רקע שמנת/חול חם ומרגיע במקום אפור קר */
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            /* צבע טקסט אפור-אדמה כהה וחם */
+            color: #3A3635;
             line-height: 1.6;
         }
 
@@ -33,14 +35,15 @@
             border-radius: 50%; /* הופך את התמונה לעיגול */
             margin-bottom: 1.5rem; /* ריווח מתחת לכותרת */
             /* מוסיף הילה לבנה וצל קטן */
-            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.3); 
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.2); 
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            /* מעבר צבעים של ירוק מרווה נקי ומרגיע */
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             
             /* הפיכת ההידר ל-STICKY */
             position: sticky; 
@@ -59,7 +62,7 @@
             background: white; /* רקע לבן ללוגו - נשמר */
             padding: 0.5rem;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -82,7 +85,8 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(147, 62, 199, 0.9), rgba(95, 90, 215, 0.9), rgba(30, 149, 223, 0.9));
+            /* רקע ירוק מרווה שמתכתב עם ההידר */
+            background: linear-gradient(135deg, rgba(143, 160, 139, 0.95), rgba(123, 141, 119, 0.95));
             padding: 6rem 2rem;
             text-align: center;
             color: white;
@@ -97,7 +101,7 @@
             margin-bottom: 1rem;
             position: relative;
             z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero p {
@@ -108,7 +112,8 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #f86173, #ff8a95);
+            /* כפתור בצבע אדמת חמרה */
+            background: linear-gradient(135deg, #D37B6C, #C46D5E);
             color: white;
             padding: 1.2rem 3.5rem;
             border: none;
@@ -119,14 +124,14 @@
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
-            box-shadow: 0 10px 30px rgba(248, 97, 115, 0.4);
+            box-shadow: 0 10px 30px rgba(196, 109, 94, 0.4);
             text-decoration: none;
             display: inline-block;
         }
 
         .cta-button:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(248, 97, 115, 0.6);
+            box-shadow: 0 15px 40px rgba(196, 109, 94, 0.6);
         }
 
         .container {
@@ -141,11 +146,12 @@
             padding: 3rem;
             background: white;
             border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .intro h2 {
-            color: #933ec7;
+            /* כותרת בירוק מרווה עמוק */
+            color: #7B8D77;
             font-size: 2.5rem;
             margin-bottom: 2rem;
         }
@@ -153,7 +159,7 @@
         .intro p {
             font-size: 1.3rem;
             line-height: 1.8;
-            color: #555;
+            color: #5A5452; /* אפור-חום רך */
             margin-bottom: 1.5rem;
         }
 
@@ -169,7 +175,7 @@
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* הוספת אפקט מעבר */
         }
@@ -181,7 +187,7 @@
 
         .feature-card:hover {
             transform: scale(1.05); /* הגדלה קלה בריחוף */
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
         }
 
         .feature-icon {
@@ -190,7 +196,8 @@
         }
 
         .feature-card h3 {
-            color: #337cdc;
+            /* כותרת קטנה בירוק מרווה */
+            color: #7B8D77;
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
@@ -201,7 +208,8 @@
         }
 
         footer {
-            background: #2c3e50;
+            /* פוטר חום-אדמה עמוק שיקרקע את הדף */
+            background: #3A3635;
             color: white;
             text-align: center;
             padding: 2.5rem;
@@ -215,8 +223,7 @@
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -231,8 +238,7 @@
         </a>
         <br>
         <nav>
-            <a href="index.html" class="active">בית</a> <!-- כאן הוספתי את דף הבית -->
-            <a href="about.html">אודות</a>
+            <a href="index.html" class="active">בית</a> <a href="about.html">אודות</a>
             <a href="services.html">שירותים</a>
             <a href="courses.html">קורסים וכלים</a>
             <a href="gifts.html">מתנות והשראה ✨</a>
