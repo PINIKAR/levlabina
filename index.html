@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>לב-לבינה - מחברת בין עולמות</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Heebo:wght@800&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://pnina-karayoff.com/">
     
     <style>
+        :root {
+            --sage-green: #9CA18F;
+            --sage-light: #B4B9A7;
+            --sand-bg: #F8F5F1;
+            --sand-dark: #E7D7C1;
+            --deep-text: #3D4139;
+            --white: #FFFFFF;
+            --accent-gold: #C5A059;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,239 +27,173 @@
         }
 
         body {
-            font-family: 'Assistant', sans-serif; 
-            /* רקע שמנת/חול חם ומרגיע */
-            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
-            color: #3A3635;
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--sand-bg);
+            color: var(--deep-text);
             line-height: 1.6;
         }
 
-        .hero-profile-image {
-            width: 150px; 
-            height: 150px;
-            object-fit: cover; 
-            border-radius: 50%; 
-            margin-bottom: 1.5rem; 
-            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.15); 
+        h1, h2, h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
         }
 
         header {
-            /* ירוק מרווה נקי ומרגיע */
-            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
+            background-color: var(--sage-green);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: sticky; 
-            top: 0; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
             z-index: 1000;
         }
 
-        .logo-container { display: inline-block; }
-
         .logo {
-            max-width: 100px; 
+            max-width: 100px;
             height: auto;
-            margin-bottom: 0;
-            background: white; 
+            background: white;
             padding: 0.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         nav { margin-top: 1rem; }
-
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 1rem;
             font-weight: 700;
-            font-size: 1rem; 
-            transition: all 0.3s ease;
+            transition: opacity 0.3s;
             display: inline-block;
         }
-
-        nav a:hover, nav a.active {
-            text-decoration: underline;
-            transform: translateY(-2px);
-        }
+        nav a:hover, nav a.active { opacity: 0.8; text-decoration: underline; }
 
         .hero {
-            /* ירוק מרווה שמתכתב עם ההידר */
-            background: linear-gradient(135deg, rgba(143, 160, 139, 0.95), rgba(123, 141, 119, 0.95));
-            padding: 6rem 2rem;
+            padding: 100px 20px;
             text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
+            background-color: var(--sand-bg);
         }
 
+        .hero-image-box {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid var(--white);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05), 10px 10px 0px var(--sage-green);
+            margin: 0 auto 30px;
+        }
+
+        .hero-image-box img { width: 100%; height: 100%; object-fit: cover; }
+
         .hero h1 {
-            font-size: 3rem;
-            max-width: 900px;
-            margin: 0 auto 1rem auto;
-            position: relative;
-            z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            line-height: 1.2;
+            font-size: 3.5rem;
+            color: var(--sage-green);
+            margin-bottom: 20px;
+            line-height: 1.1;
         }
 
         .hero p {
             font-size: 1.4rem;
-            max-width: 750px;
-            margin: 0 auto 2.5rem auto;
-            position: relative;
-            z-index: 1;
-            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--deep-text);
         }
 
         .cta-button {
-            /* כפתור בצבע חמרה רכה */
-            background: linear-gradient(135deg, #DE9C90, #CE897B);
-            color: white;
-            padding: 1.2rem 3.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 10px 20px rgba(206, 137, 123, 0.3);
-            text-decoration: none;
             display: inline-block;
+            background-color: var(--sage-green);
+            color: var(--white);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(156, 161, 143, 0.3);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(206, 137, 123, 0.4);
+            transform: translateY(-3px);
+            background-color: var(--deep-text);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 80px 20px;
         }
 
         .intro {
-            text-align: center;
-            margin: 4rem auto;
-            max-width: 800px;
-            padding: 3rem;
-            background: white;
-            border-radius: 30px;
+            background: var(--white);
+            padding: 60px 40px;
+            border-radius: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            text-align: center;
+            margin-bottom: 60px;
+            border: 1px solid var(--sand-dark);
         }
 
-        .intro h2 {
-            color: #7B8D77; /* ירוק מרווה */
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .intro p {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            color: #5A5452; 
-            margin-bottom: 1rem;
-        }
+        .intro h2 { color: var(--sage-green); font-size: 2.2rem; margin-bottom: 20px; }
+        .intro p { font-size: 1.25rem; color: var(--deep-text); margin-bottom: 15px; }
 
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+            gap: 30px;
         }
 
-        /* העיצוב החדש והיוקרתי לקוביות התכונות */
         .feature-card {
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 25px;
             text-align: center;
-            transition: all 0.3s ease; 
-            border: 1px solid #E5E0D8; /* מסגרת עדינה מאוד */
-            height: 100%;
-        }
-        
-        .feature-card a { 
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            height: 100%;
+            transition: all 0.3s ease;
+            border-bottom: 6px solid var(--sage-green);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
         }
 
-        .feature-card:hover {
-            transform: translateY(-8px); 
-            box-shadow: 0 15px 35px rgba(123, 141, 119, 0.15); /* צללית מרווה רכה */
-            border-color: #8FA08B;
-        }
+        .feature-card:hover { transform: translateY(-10px); }
 
-        /* הבית החדש לאימוג'ים - עיגול מרווה שקוף */
         .feature-icon-wrapper {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem auto;
-            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.2));
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: var(--sand-bg);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            transition: transform 0.3s ease;
+            font-size: 2.2rem;
+            border: 2px dashed var(--sand-dark);
         }
 
-        .feature-card:hover .feature-icon-wrapper {
-            transform: scale(1.1);
-        }
-
-        .feature-card h3 {
-            color: #7B8D77; /* ירוק מרווה */
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: #5A5452;
-            line-height: 1.7;
-        }
+        .feature-card h3 { color: var(--sage-green); font-size: 1.7rem; margin-bottom: 15px; }
+        .feature-card p { color: var(--deep-text); font-size: 1.1rem; }
 
         footer {
-            background: #3A3635; /* חום-אדמה */
-            color: white;
+            padding: 80px 0;
+            border-top: 1px solid var(--sand-dark);
             text-align: center;
-            padding: 2.5rem;
-            margin-top: 4rem;
         }
 
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-        footer a:hover { text-decoration: underline; }
+        footer p.brand { font-weight: 700; font-size: 24px; color: var(--sage-green); margin-bottom: 5px; }
+        footer a { color: var(--deep-text); text-decoration: none; }
+        footer a:hover { color: var(--sage-green); }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.2rem; }
-            nav a { display: block; margin: 0.8rem 0; }
+            .hero h1 { font-size: 2.5rem; }
+            nav a { display: block; margin: 10px 0; }
         }
     </style>
 </head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3GZX11R7X2');
-</script>
 <body>
+
     <header>
         <a href="index.html">
             <img src="logo.png" alt="לב-לבינה" class="logo">
         </a>
-        <br>
         <nav>
             <a href="index.html" class="active">בית</a>
             <a href="about.html">אודות</a>
@@ -260,54 +204,48 @@
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <img src="pnina-profile.jpg" alt="פנינה קריוף - לבלבינה" class="hero-profile-image">
+    <section class="hero">
+        <div class="hero-image-box">
+            <img src="pnina-profile.jpg" alt="פנינה קריוף">
+        </div>
         <h1>הטכנולוגיה לא תחליף את הלב שלכם. תנו לה לעבוד בשבילכם.</h1>
-        <p>עולם הטיפול לא צריך לאבד את הנשמה שלו בגלל הבינה המלאכותית. אני כאן כדי ללמד אתכם איך לחבר בין האינטואיציה שלכם לטכנולוגיה - בלי ז'רגון, בלי סטרס, ובקצב שלכם.</p>
+        <p>מעבר רך לאנשי טיפול ורוח לעבודה חכמה עם בינה מלאכותית. בלי לפחד מהמסך, בלי לאבד את הנשמה.</p>
         <a href="services.html" class="cta-button">בואו נתחיל</a>
     </section>
 
     <div class="container">
         <div class="intro">
             <h2>ברוכים הבאים ללב-לבינה</h2>
-            <p>אני פנינה, ובעשר השנים האחרונות ליוויתי עשרות אנשים במסעות של ריפוי, צמיחה והתמרה.</p>
+            <p>אני פנינה, ואני כאן כדי להראות לכם שהבינה המלאכותית היא לא מכונה קרה - היא הקרקע החדשה עליה הלב שלכם יכול לצמוח.</p>
             <p><strong>אני לא מלמדת טכנולוגיה - אני מלמדת אנשים איך לא לפחד ממנה.</strong></p>
         </div>
 
         <div class="features">
             <div class="feature-card">
-                <a href="services.html">
-                    <div class="feature-icon-wrapper">🤖</div>
-                    <h3>בינה מלאכותית</h3>
-                    <p>כלים פשוטים ונגישים לעבודה עם AI</p>
-                </a>
+                <div class="feature-icon-wrapper">🤖</div>
+                <h3>בינה מלאכותית</h3>
+                <p>כלים פשוטים ונגישים לעבודה עם AI</p>
             </div>
             
             <div class="feature-card">
-                <a href="services.html">
-                    <div class="feature-icon-wrapper">🎨</div>
-                    <h3>יצירה דיגיטלית</h3>
-                    <p>תכנים וגרפיקה בלחיצת כפתור</p>
-                </a>
+                <div class="feature-icon-wrapper">🎨</div>
+                <h3>יצירה דיגיטלית</h3>
+                <p>תכנים וגרפיקה בלחיצת כפתור</p>
             </div>
             
             <div class="feature-card">
-                <a href="services.html">
-                    <div class="feature-icon-wrapper">💝</div>
-                    <h3>ליווי אישי</h3>
-                    <p>בדרך שמרגישה נכונה ורגישה</p>
-                </a>
+                <div class="feature-icon-wrapper">💝</div>
+                <h3>ליווי אישי</h3>
+                <p>בדרך שמרגישה נכונה ורגישה</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>
-            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html">הצהרת נגישות</a> | 
-            <a href="terms.html">תקנון</a> | 
-            <a href="privacy.html">מדיניות פרטיות</a>
-        </p>
+        <p class="brand">פנינה קריוף - לב-לבינה</p>
+        <p>מזקקת את המהות, מחברת את הלב</p>
+        <p>&copy; 2025 | <a href="privacy.html">פרטיות</a></p>
     </footer>
+
 </body>
 </html>
