@@ -16,17 +16,19 @@
         }
 
         body {
-            font-family: 'Assistant', sans-serif; /* שימוש בפונט הנקי והקריא */
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            font-family: 'Assistant', sans-serif; 
+            /* רקע שמנת/חול חם ומרגיע */
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            color: #3A3635; /* אפור-אדמה כהה */
             line-height: 1.8;
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            /* מעבר צבעים של ירוק מרווה */
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             
             /* הפיכת ההידר ל-STICKY */
             position: sticky; 
@@ -35,13 +37,13 @@
         }
 
         .logo {
-            max-width: 100px; /* גודל מוקטן כדי להתאים ל-Sticky Header */
+            max-width: 100px; 
             height: auto;
-            margin-bottom: 0; /* הוסר ריווח מיותר */
+            margin-bottom: 0; 
             background: white;
-            padding: 0.5rem; /* צמצום ה-padding סביב הלוגו */
+            padding: 0.5rem; 
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -51,8 +53,8 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1rem; /* צמצום המרווחים בתפריט */
-            font-weight: 700; /* הדגשה עבה יותר */
+            margin: 0 1rem; 
+            font-weight: 700; 
             font-size: 1rem;
             transition: all 0.3s ease;
             display: inline-block;
@@ -75,13 +77,13 @@
         }
 
         .page-header h1 {
-            color: #933ec7;
+            color: #7B8D77; /* ירוק מרווה עמוק */
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
         .page-header .date {
-            color: #666;
+            color: #8FA08B; /* ירוק מרווה בהיר */
             font-size: 1.1rem;
         }
 
@@ -89,26 +91,26 @@
             background: white;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             margin-bottom: 2rem;
         }
 
         .content-section h2 {
-            color: #337cdc;
+            color: #C46D5E; /* אדמת חמרה */
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            border-right: 4px solid #933ec7;
+            border-right: 4px solid #7B8D77; /* פס צד ירוק מרווה */
             padding-right: 1rem;
         }
 
         .content-section h3 {
-            color: #5f5ad7;
+            color: #7B8D77; /* ירוק מרווה */
             font-size: 1.5rem;
             margin: 2rem 0 1rem;
         }
 
         .content-section p {
-            color: #555;
+            color: #5A5452; /* אפור-חום רך */
             line-height: 1.9;
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
@@ -119,55 +121,58 @@
         }
 
         .content-section li {
-            color: #555;
+            color: #5A5452;
             margin-bottom: 0.8rem;
             line-height: 1.7;
         }
 
         .contact-info {
-            background: linear-gradient(135deg, rgba(147, 62, 199, 0.1), rgba(30, 149, 223, 0.1));
+            /* רקע מרווה שקוף ועדין */
+            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.1));
             padding: 2rem;
             border-radius: 15px;
             margin-top: 2rem;
         }
 
         .contact-info h3 {
-            color: #933ec7;
+            color: #7B8D77; /* ירוק מרווה */
             margin-bottom: 1rem;
         }
 
         .contact-info p {
-            color: #333;
+            color: #3A3635;
             font-weight: 600;
             margin: 0.5rem 0;
         }
 
         .contact-info a {
-            color: #337cdc;
+            color: #C46D5E; /* אדמת חמרה לקישור */
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
-            color: #933ec7;
+            color: #8FA08B; /* ירוק מרווה במעבר עכבר */
             text-decoration: underline;
         }
 
         .highlight {
-            background: #fff3cd;
-            border-right: 4px solid #ffc107;
+            background: #FDFBF7; /* רקע שמנת בהיר */
+            border-right: 4px solid #C46D5E; /* פס צד חמרה */
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
         }
 
         .highlight p {
-            color: #856404;
+            color: #5A5452;
             margin: 0;
         }
 
         footer {
-            background: #2c3e50;
+            /* פוטר חום-אדמה עמוק */
+            background: #3A3635;
             color: white;
             text-align: center;
             padding: 2.5rem;
@@ -194,8 +199,7 @@
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
