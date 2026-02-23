@@ -9,15 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://pnina-karayoff.com/">
     
-    <!-- טעינת Tailwind CSS לעיצוב הקלפים -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- טעינת React -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -27,21 +24,21 @@
     </script>
 
     <style>
-        /* העתקת העיצוב המקורי של האתר כדי לשמור על אחידות */
+        /* העיצוב הכללי של האתר לשמירה על אחידות */
         body {
             font-family: 'Assistant', sans-serif; 
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            color: #3A3635;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: sticky; 
             top: 0; 
             z-index: 1000;
@@ -53,8 +50,8 @@
             background: white;
             padding: 0.5rem;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin-bottom: 10px; /* ריווח קטן מתחת ללוגו */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
         }
 
         nav { margin-top: 1rem; }
@@ -75,11 +72,22 @@
         }
 
         footer {
-            background: #2c3e50;
+            background: #3A3635;
             color: white;
             text-align: center;
             padding: 2.5rem;
             margin-top: 0; 
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
         }
 
         /* סגנונות מיוחדים עבור קלפי המזלות */
@@ -91,38 +99,33 @@
 </head>
 <body>
 
-    <!-- ההידר המקורי שלך -->
     <header>
         <a href="index.html">
             <img src="logo.png" alt="לב-לבינה" class="logo">
         </a>
-        <br> <!-- שבירת שורה ליתר ביטחון -->
+        <br>
         <nav>
             <a href="index.html">בית</a>
             <a href="about.html">אודות</a>
             <a href="services.html">שירותים</a>
             <a href="courses.html">קורסים וכלים</a>
-            <a href="gifts.html" class="active" style="color: #FFD700; text-shadow: 0px 0px 5px rgba(0,0,0,0.3);">מתנות והשראה ✨</a>
+            <a href="gifts.html" class="active">מתנות והשראה ✨</a>
             <a href="contact.html">צור קשר</a>
         </nav>
     </header>
 
-    <!-- כאן נכנסת אפליקציית הקלפים -->
     <div id="root"></div>
 
-    <!-- הפוטר המקורי שלך -->
     <footer>
         <p>
             &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-            <a href="terms.html" style="color: white;">תקנון</a> | 
-            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
+            <a href="accessibility.html">הצהרת נגישות</a> | 
+            <a href="terms.html">תקנון</a> | 
+            <a href="privacy.html">מדיניות פרטיות</a>
         </p>
     </footer>
 
-    <!-- הקוד של אפליקציית המזלות -->
     <script type="text/babel">
-        // אייקונים בפורמט SVG
         const Icons = {
             Sparkles: () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>,
             Moon: () => <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>,
@@ -157,8 +160,8 @@
                 <div className={`relative h-full w-full transition-all duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
                     
                     {/* Front of Card */}
-                    <div className="absolute inset-0 h-full w-full bg-white rounded-2xl shadow-xl border-2 border-purple-100 p-6 backface-hidden flex flex-col items-center justify-between text-center overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300"></div>
+                    <div className="absolute inset-0 h-full w-full bg-white rounded-2xl shadow-xl border-2 border-[#E5E0D8] p-6 backface-hidden flex flex-col items-center justify-between text-center overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#8FA08B] to-[#CE897B]"></div>
                     
                     <div className="mt-4">
                         <span className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold ${style.bg} ${style.color}`}>
@@ -167,40 +170,40 @@
                     </div>
 
                     <div className="flex flex-col items-center">
-                        <h2 className="text-3xl font-bold text-slate-800 mb-1">{sign.name}</h2>
-                        <p className="text-sm text-slate-400 mb-4">{sign.date}</p>
+                        <h2 className="text-3xl font-bold text-[#7B8D77] mb-1">{sign.name}</h2>
+                        <p className="text-sm text-[#8FA08B] mb-4">{sign.date}</p>
                         <div className="text-6xl mb-4 opacity-80 filter drop-shadow-md">{sign.emoji}</div>
                     </div>
 
-                    <div className="bg-slate-50 p-4 rounded-xl w-full border border-slate-100">
-                        <h3 className="text-xs uppercase tracking-widest text-slate-400 font-bold mb-1">הידוע והמוכר</h3>
-                        <p className="text-slate-700 font-medium leading-snug text-sm">{sign.known}</p>
+                    <div className="bg-[#FDFBF7] p-4 rounded-xl w-full border border-[#E5E0D8]">
+                        <h3 className="text-xs uppercase tracking-widest text-[#CE897B] font-bold mb-1">הידוע והמוכר</h3>
+                        <p className="text-[#5A5452] font-medium leading-snug text-sm">{sign.known}</p>
                     </div>
                     
-                    <div className="text-xs text-purple-400 mt-2 flex items-center justify-center gap-1 animate-pulse">
+                    <div className="text-xs text-[#CE897B] mt-2 flex items-center justify-center gap-1 animate-pulse">
                         <Icons.Sparkles /> לחצו לגלות את הקסם
                     </div>
                     </div>
 
                     {/* Back of Card */}
-                    <div className="absolute inset-0 h-full w-full bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl shadow-xl p-6 backface-hidden rotate-y-180 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#7B8D77] to-[#5A6E52] rounded-2xl shadow-xl p-6 backface-hidden rotate-y-180 text-white flex flex-col justify-between relative overflow-hidden">
                     <div className="absolute top-[-20px] right-[-20px] opacity-10"><Icons.Moon /></div>
 
                     <div>
                         <div className="flex justify-between items-center mb-4 border-b border-white/20 pb-2">
                         <span className="font-bold text-lg">{sign.name}</span>
-                        <Icons.Star className="text-yellow-300" />
+                        <Icons.Star className="text-[#FDFBF7]" />
                         </div>
 
                         <div className="mb-5">
-                        <h3 className="text-xs uppercase tracking-widest text-purple-200 font-bold mb-1 flex items-center gap-1">
+                        <h3 className="text-xs uppercase tracking-widest text-[#FDFBF7] font-bold mb-1 flex items-center gap-1">
                             <Icons.Heart size={12} /> משהו מוזר
                         </h3>
-                        <p className="text-sm leading-relaxed text-purple-50 font-light">{sign.weird}</p>
+                        <p className="text-sm leading-relaxed text-white font-light">{sign.weird}</p>
                         </div>
 
                         <div>
-                        <h3 className="text-xs uppercase tracking-widest text-yellow-200 font-bold mb-1 flex items-center gap-1">
+                        <h3 className="text-xs uppercase tracking-widest text-[#FDFBF7] font-bold mb-1 flex items-center gap-1">
                             <Icons.Sparkles size={12} /> תחזית 2026
                         </h3>
                         <p className="text-sm leading-relaxed text-white font-medium">{sign.forecast}</p>
@@ -208,7 +211,7 @@
                     </div>
 
                     <div className="text-center mt-auto pt-2 border-t border-white/10">
-                        <span className="text-xs text-purple-200">✨ השנה הזו תאיר פנים ✨</span>
+                        <span className="text-xs text-[#FDFBF7]">✨ השנה הזו תאיר פנים ✨</span>
                     </div>
                     </div>
 
@@ -239,16 +242,16 @@
                     {/* Header Text */}
                     <div className="py-12 text-center px-4">
                         <div className="flex justify-center mb-4">
-                            <div className="text-purple-400 animate-bounce"><Icons.Moon /></div>
-                            <div className="text-yellow-400 mt-6 -mr-4"><Icons.Star /></div>
+                            <div className="text-[#8FA08B] animate-bounce"><Icons.Moon /></div>
+                            <div className="text-[#CE897B] mt-6 -mr-4"><Icons.Star /></div>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500 mb-3 drop-shadow-sm">
+                        <h1 className="text-4xl md:text-5xl font-bold text-[#7B8D77] mb-3 drop-shadow-sm">
                         גלגל המזלות המיסטי
                         </h1>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto font-light">
+                        <p className="text-lg text-[#5A5452] max-w-2xl mx-auto font-light">
                         גלו את הסודות הקטנים, הקסם הנסתר והעתיד המנצנץ לשנת 2026.
                         <br />
-                        <span className="text-sm text-purple-400 mt-2 block font-medium">(לחצו על הקלף כדי לגלות את הסוד)</span>
+                        <span className="text-sm text-[#CE897B] mt-2 block font-medium">(לחצו על הקלף כדי לגלות את הסוד)</span>
                         </p>
                     </div>
 
