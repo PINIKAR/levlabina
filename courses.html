@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>קורסים וכלים דיגיטליים - לב-לבינה</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Assistant:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        :root {
+            --sage-green: #9CA18F;
+            --sage-light: #B4B9A7;
+            --sand-bg: #F8F5F1;
+            --sand-dark: #E7D7C1;
+            --deep-text: #3D4139;
+            --white: #FFFFFF;
+            --accent-gold: #C5A059;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -18,18 +30,22 @@
 
         body {
             font-family: 'Assistant', sans-serif; 
-            /* רקע שמנת/חול חם ומרגיע */
-            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
-            color: #3A3635; /* אפור-אדמה כהה */
+            background-color: var(--sand-bg);
+            color: var(--deep-text);
             line-height: 1.6;
         }
 
+        h1, h2, h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            color: var(--sage-green);
+        }
+
         header {
-            /* מעבר צבעים של ירוק מרווה */
-            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
+            background-color: var(--sage-green);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky; 
             top: 0; 
             z-index: 1000;
@@ -38,7 +54,6 @@
         .logo {
             max-width: 100px;
             height: auto;
-            margin-bottom: 0;
             background: white;
             padding: 0.5rem; 
             border-radius: 10px;
@@ -55,13 +70,13 @@
             margin: 0 1rem; 
             font-weight: 700; 
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease;
             display: inline-block;
         }
 
         nav a:hover, nav a.active {
+            opacity: 0.8;
             text-decoration: underline;
-            transform: translateY(-2px);
         }
 
         .container {
@@ -76,14 +91,14 @@
         }
 
         .page-header h1 {
-            color: #7B8D77; /* ירוק מרווה עמוק */
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            line-height: 1.1;
         }
 
         .page-header p {
             font-size: 1.3rem;
-            color: #5A5452; /* אפור-חום רך */
+            opacity: 0.8;
         }
 
         .courses-grid {
@@ -93,39 +108,39 @@
         }
 
         .course-card {
-            background: white;
-            border-radius: 20px;
+            background: var(--white);
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
             height: 100%;
             position: relative; 
+            border-bottom: 6px solid var(--sage-green);
         }
 
         .course-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
         }
 
         .course-image {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            background: #f8f9fa;
+            background: var(--sand-dark);
         }
 
         .new-badge {
             position: absolute;
             top: 20px;
             right: 20px;
-            /* כתום-חמרה חי ואלגנטי במקום אדום צועק */
-            background: #E07A5F; 
-            color: #FDFBF7;
-            padding: 5px 15px;
+            background: var(--accent-gold); 
+            color: var(--white);
+            padding: 6px 18px;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 0.9rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             animation: pulse 2s infinite;
@@ -139,20 +154,19 @@
         }
 
         .course-content {
-            padding: 2rem;
+            padding: 2.5rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
         .course-content h2 {
-            color: #7B8D77; /* ירוק מרווה עמוק */
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
 
         .course-content p {
-            color: #5A5452;
+            color: var(--deep-text);
             line-height: 1.6;
             margin-bottom: 1.5rem;
             flex-grow: 1; 
@@ -165,64 +179,80 @@
 
         .course-features li {
             padding: 0.5rem 0;
-            color: #5A5452;
             font-size: 0.95rem;
+            display: flex;
+            align-items: center;
         }
 
         .course-features li::before {
-            content: "✓ ";
-            color: #CE897B; /* צ'קמארקים באדמת חמרה */
-            font-weight: bold;
-            margin-left: 0.5rem;
+            content: "✓";
+            color: var(--sage-green);
+            font-weight: 900;
+            margin-left: 10px;
         }
 
         .course-btn {
-            /* כפתורים באדמת חמרה */
-            background: linear-gradient(135deg, #DE9C90, #CE897B);
-            color: white;
+            display: inline-block;
+            background-color: var(--sage-green);
+            color: var(--white);
             padding: 1rem 2.5rem;
             border: none;
             border-radius: 50px;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
             text-align: center;
             align-self: flex-start; 
-            box-shadow: 0 10px 20px rgba(196, 109, 94, 0.2);
+            box-shadow: 0 4px 15px rgba(156, 161, 143, 0.2);
         }
 
         .course-btn.app-btn {
-            /* כפתור הפרומפטבוק בולט אבל שפוי (ירוק מרווה עמוק) */
-            background: linear-gradient(135deg, #6C8164, #5A6E52); 
+            background-color: var(--deep-text); 
             width: 100%; 
-            box-shadow: 0 10px 20px rgba(90, 110, 82, 0.2);
         }
 
         .course-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(196, 109, 94, 0.4);
+            background-color: var(--deep-text);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
-        
+
         .course-btn.app-btn:hover {
-             box-shadow: 0 15px 40px rgba(90, 110, 82, 0.4);
+            background-color: var(--sage-green);
         }
 
         footer {
-            /* פוטר חום-אדמה עמוק */
-            background: #3A3635;
-            color: white;
+            padding: 80px 0;
+            border-top: 1px solid var(--sand-dark);
             text-align: center;
-            padding: 2.5rem;
-            margin-top: 4rem;
+            background-color: var(--sand-bg);
+        }
+
+        footer p.brand { 
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800; 
+            font-size: 24px; 
+            color: var(--sage-green); 
+            margin-bottom: 10px; 
+        }
+
+        footer .legal-links a {
+            color: var(--deep-text);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer .legal-links a:hover {
+            color: var(--sage-green);
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .courses-grid {
-                grid-template-columns: 1fr;
-            }
+            .page-header h1 { font-size: 2.5rem; }
+            .courses-grid { grid-template-columns: 1fr; }
             nav a { display: block; margin: 0.8rem 0; }
         }
     </style>
@@ -232,7 +262,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-3GZX11R7X2');
 </script>
 <body>
@@ -240,7 +269,6 @@
         <a href="index.html">
             <img src="logo.png" alt="לב-לבינה" class="logo">
         </a>
-        <br>
         <nav>
             <a href="index.html">בית</a>
             <a href="about.html">אודות</a>
@@ -266,11 +294,11 @@
                 <div class="course-content">
                     <h2>101 Prompt Book</h2>
                     <p><strong>האפליקציה שתשנה את איך שאת עובדת עם AI.</strong><br>
-                    במקום לשבור את הראש מה לכתוב ל-ChatGPT, קבלי ספרייה ענקית של הנחיות (פרומפטים) מוכנות ומקצועיות, מסודרות לפי קטגוריות.</p>
+                    במקום לשבור את הראש מה לכתוב ל-ChatGPT, קבלי ספרייה ענקית של הנחיות מוכנות ומקצועיות, מסודרות לפי קטגוריות.</p>
                     <ul class="course-features">
                         <li>מאגר ענק של פרומפטים מוכנים</li>
                         <li>העתקה בלחיצת כפתור</li>
-                        <li>מתאים לשיווק, כתיבה, אסטרטגיה ועוד</li>
+                        <li>מתאים לשיווק, כתיבה ואסטרטגיה</li>
                         <li>גישה מיידית מכל מקום</li>
                     </ul>
                     <a href="https://101promptbook.pnina-karayoff.com/" target="_blank" class="course-btn app-btn">לרכישה וכניסה מיידית &larr;</a>
@@ -326,12 +354,14 @@
     </div>
 
     <footer>
-        <p>
-            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-            <a href="terms.html" style="color: white;">תקנון</a> | 
-            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
-        </p>
+        <p class="brand">פנינה קריוף - לב-לבינה</p>
+        <p>מזקקת את המהות, מחברת את הלב</p>
+        <div class="legal-links">
+            <a href="accessibility.html">הצהרת נגישות</a> | 
+            <a href="terms.html">תקנון</a> | 
+            <a href="privacy.html">מדיניות פרטיות</a>
+        </div>
+        <p style="font-size: 12px; margin-top: 20px; color: #888;">&copy; 2025 כל הזכויות שמורות</p>
     </footer>
 </body>
 </html>
