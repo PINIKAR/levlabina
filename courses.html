@@ -7,7 +7,6 @@
     <title>קורסים וכלים דיגיטליים - לב-לבינה</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
-    <!-- הוספת אייקונים כדי שיהיה יפה בכרטיס החדש -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -19,16 +18,18 @@
 
         body {
             font-family: 'Assistant', sans-serif; 
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            /* רקע שמנת/חול חם ומרגיע */
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            color: #3A3635; /* אפור-אדמה כהה */
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            /* מעבר צבעים של ירוק מרווה */
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: sticky; 
             top: 0; 
             z-index: 1000;
@@ -41,7 +42,7 @@
             background: white;
             padding: 0.5rem; 
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -75,14 +76,14 @@
         }
 
         .page-header h1 {
-            color: #933ec7;
+            color: #7B8D77; /* ירוק מרווה עמוק */
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
         .page-header p {
             font-size: 1.3rem;
-            color: #555;
+            color: #5A5452; /* אפור-חום רך */
         }
 
         .courses-grid {
@@ -95,17 +96,17 @@
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
             height: 100%;
-            position: relative; /* הוספתי כדי שאפשר יהיה למקם את התגית "חדש" */
+            position: relative; 
         }
 
         .course-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(147, 62, 199, 0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
         }
 
         .course-image {
@@ -119,15 +120,16 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: #ff6b6b;
-            color: white;
+            /* כתום-חמרה חי ואלגנטי במקום אדום צועק */
+            background: #E07A5F; 
+            color: #FDFBF7;
             padding: 5px 15px;
             border-radius: 50px;
             font-weight: bold;
             font-size: 0.9rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             animation: pulse 2s infinite;
-            z-index: 10; /* מוודא שזה מעל התמונה */
+            z-index: 10; 
         }
 
         @keyframes pulse {
@@ -144,16 +146,16 @@
         }
 
         .course-content h2 {
-            color: #337cdc;
+            color: #7B8D77; /* ירוק מרווה עמוק */
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
 
         .course-content p {
-            color: #666;
+            color: #5A5452;
             line-height: 1.6;
             margin-bottom: 1.5rem;
-            flex-grow: 1; /* כדי שהכפתור תמיד יהיה למטה */
+            flex-grow: 1; 
         }
 
         .course-features {
@@ -163,19 +165,20 @@
 
         .course-features li {
             padding: 0.5rem 0;
-            color: #555;
+            color: #5A5452;
             font-size: 0.95rem;
         }
 
         .course-features li::before {
             content: "✓ ";
-            color: #933ec7;
+            color: #C46D5E; /* צ'קמארקים באדמת חמרה */
             font-weight: bold;
             margin-left: 0.5rem;
         }
 
         .course-btn {
-            background: linear-gradient(135deg, #933ec7, #5f5ad7);
+            /* כפתורים באדמת חמרה */
+            background: linear-gradient(135deg, #D37B6C, #C46D5E);
             color: white;
             padding: 1rem 2.5rem;
             border: none;
@@ -187,21 +190,29 @@
             text-decoration: none;
             display: inline-block;
             text-align: center;
-            align-self: flex-start; /* יישור הכפתור */
+            align-self: flex-start; 
+            box-shadow: 0 10px 20px rgba(196, 109, 94, 0.2);
         }
 
         .course-btn.app-btn {
-            background: linear-gradient(135deg, #11998e, #38ef7d); /* כפתור ירוק בולט לאפליקציה */
-            width: 100%; /* כפתור רחב למוצר החדש */
+            /* כפתור הפרומפטבוק בולט אבל שפוי (ירוק מרווה עמוק) */
+            background: linear-gradient(135deg, #6C8164, #5A6E52); 
+            width: 100%; 
+            box-shadow: 0 10px 20px rgba(90, 110, 82, 0.2);
         }
 
         .course-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(147, 62, 199, 0.4);
+            box-shadow: 0 15px 40px rgba(196, 109, 94, 0.4);
+        }
+        
+        .course-btn.app-btn:hover {
+             box-shadow: 0 15px 40px rgba(90, 110, 82, 0.4);
         }
 
         footer {
-            background: #2c3e50;
+            /* פוטר חום-אדמה עמוק */
+            background: #3A3635;
             color: white;
             text-align: center;
             padding: 2.5rem;
@@ -216,8 +227,7 @@
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -236,7 +246,7 @@
             <a href="about.html">אודות</a>
             <a href="services.html">שירותים</a>
             <a href="courses.html" class="active">קורסים וכלים</a>
-            <a href="gifts.html">מתנות והשראה ✨</a> <!-- הקישור לדף החינמי -->
+            <a href="gifts.html">מתנות והשראה ✨</a> 
             <a href="contact.html">צור קשר</a>
         </nav>
     </header>
@@ -249,11 +259,8 @@
 
         <div class="courses-grid">
             
-            <!-- המוצר החדש: 101 Prompt Book -->
             <div class="course-card">
                 <span class="new-badge">חדש!</span>
-                <!-- כאן הכנסתי את התמונה במקום האייקון -->
-                <!-- זכרי להעלות תמונה בשם prompt-book.jpg לגיטהאב -->
                 <img src="prompt-book.jpg" alt="101 Prompt Book" class="course-image">
                 
                 <div class="course-content">
@@ -270,7 +277,6 @@
                 </div>
             </div>
 
-            <!-- קורס קיים 1 -->
             <div class="course-card">
                 <img src="course-ai.jpg" alt="קורס AI למטפלים" class="course-image">
                 <div class="course-content">
@@ -286,12 +292,11 @@
                 </div>
             </div>
 
-            <!-- קורס קיים 2 -->
             <div class="course-card">
                 <img src="course-content.jpg" alt="יצירת תוכן חכם" class="course-image">
                 <div class="course-content">
                     <h2>יצירת תוכן חכם</h2>
-                    <p>איך ליצור תוכן איכותי ומשמעותי בעזרת כלים דיגיטליים – תוך שמירה על הקול האישי שלכם.</p>
+                    <p>איך ליצור תוכן איכותי ומשמעותי בעזרת כלים דיגיטליים - תוך שמירה על הקול האישי שלכם.</p>
                     <ul class="course-features">
                         <li>כתיבה יעילה עם AI</li>
                         <li>יצירת גרפיקה וויזואליה</li>
@@ -302,7 +307,6 @@
                 </div>
             </div>
 
-            <!-- קורס קיים 3 -->
             <div class="course-card">
                 <img src="course-private.jpg" alt="ליווי פרטני" class="course-image">
                 <div class="course-content">
