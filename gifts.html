@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מתנות והשראה | לב-לבינה</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="canonical" href="https://pnina-karayoff.com/">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
@@ -18,21 +21,36 @@
     </script>
 
     <style>
+        :root {
+            --sage-green: #9CA18F;
+            --sage-light: #B4B9A7;
+            --sand-bg: #F8F5F1;
+            --sand-dark: #E7D7C1;
+            --deep-text: #3D4139;
+            --white: #FFFFFF;
+            --accent-gold: #C5A059;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Assistant', sans-serif; 
-            /* רקע שמנת/חול חם ומרגיע */
-            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
-            color: #3A3635;
+            background-color: var(--sand-bg);
+            color: var(--deep-text);
             line-height: 1.6;
         }
 
+        h1, h2, h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            color: var(--sage-green);
+        }
+
         header {
-            /* מעבר צבעים של ירוק מרווה */
-            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
+            background-color: var(--sage-green);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky; top: 0; z-index: 1000;
         }
 
@@ -43,36 +61,34 @@
             padding: 0.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 10px;
         }
 
         nav { margin-top: 1rem; }
         nav a {
             color: white; text-decoration: none; margin: 0 1rem;
-            font-weight: 700; font-size: 1rem; transition: all 0.3s ease; display: inline-block;
+            font-weight: 700; font-size: 1rem; transition: opacity 0.3s ease; display: inline-block;
         }
-        nav a:hover, nav a.active { text-decoration: underline; transform: translateY(-2px); }
+        nav a:hover, nav a.active { opacity: 0.8; text-decoration: underline; }
 
         .page-header {
-            /* רקע מרווה שקוף ועדין */
-            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.1));
-            padding: 4rem 2rem;
+            background-color: var(--white);
+            padding: 5rem 2rem;
             text-align: center;
-            border-radius: 0 0 30px 30px; /* קצת עגלגלות למטה שיהיה רך */
+            border-bottom: 1px solid var(--sand-dark);
             margin-bottom: 2rem;
         }
 
         .page-header h1 { 
-            color: #7B8D77; /* ירוק מרווה עמוק */
-            font-size: 3rem; 
+            font-size: 3.5rem; 
             margin-bottom: 1rem; 
+            line-height: 1.1;
         }
         
         .page-header p { 
-            color: #5A5452; /* אפור-חום רך */
             font-size: 1.4rem; 
             max-width: 800px; 
             margin: 0 auto; 
+            opacity: 0.8;
         }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
@@ -80,65 +96,103 @@
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             text-decoration: none; 
             color: inherit;
+            border-bottom: 6px solid var(--sage-green);
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
         }
 
-        .feature-icon { font-size: 3.5rem; margin-bottom: 1rem; }
-        .feature-card h3 { color: #7B8D77; font-size: 1.8rem; margin-bottom: 1rem; }
-        .feature-card p { color: #5A5452; margin-bottom: 1.5rem; }
+        .feature-icon { 
+            font-size: 3.5rem; 
+            margin-bottom: 1.5rem; 
+            display: block;
+        }
+
+        .feature-card h3 { 
+            font-size: 1.8rem; 
+            margin-bottom: 1rem; 
+        }
+
+        .feature-card p { 
+            margin-bottom: 2rem; 
+            font-size: 1.1rem;
+        }
         
         .card-btn {
             display: inline-block;
-            /* כפתור באדמת חמרה */
-            background: linear-gradient(135deg, #DE9C90, #CE897B);
-            color: white;
-            padding: 0.8rem 2rem;
+            background-color: var(--sage-green);
+            color: var(--white);
+            padding: 0.9rem 2.2rem;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
             align-self: center;
-            box-shadow: 0 10px 20px rgba(196, 109, 94, 0.2);
+            box-shadow: 0 4px 12px rgba(156, 161, 143, 0.2);
         }
         
         .card-btn:hover {
-             box-shadow: 0 15px 40px rgba(196, 109, 94, 0.4);
+             background-color: var(--deep-text);
+             box-shadow: 0 6px 18px rgba(0,0,0,0.2);
         }
 
         /* כפתור מיוחד לסוכנת AI */
         .ai-btn {
-            /* ירוק מרווה עמוק לסוכנת ה-AI */
-            background: linear-gradient(135deg, #6C8164, #5A6E52); 
-            box-shadow: 0 10px 20px rgba(90, 110, 82, 0.2);
+            background-color: var(--accent-gold); 
         }
         
         .ai-btn:hover {
-            box-shadow: 0 15px 40px rgba(90, 110, 82, 0.4);
+            background-color: var(--deep-text);
         }
 
         footer {
-            /* פוטר חום-אדמה עמוק */
-            background: #3A3635; color: white; text-align: center; padding: 2.5rem; margin-top: 4rem;
+            padding: 80px 0;
+            border-top: 1px solid var(--sand-dark);
+            text-align: center;
+            background-color: var(--sand-bg);
+        }
+
+        footer p.brand { 
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800; 
+            font-size: 24px; 
+            color: var(--sage-green); 
+            margin-bottom: 10px; 
+        }
+
+        footer .legal-links a {
+            color: var(--deep-text);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer .legal-links a:hover {
+            color: var(--sage-green);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.5rem; }
+            nav a { display: block; margin: 0.8rem 0; }
         }
     </style>
 </head>
@@ -148,7 +202,6 @@
         <a href="index.html">
             <img src="logo.png" alt="לב-לבינה" class="logo">
         </a>
-        <br>
         <nav>
             <a href="index.html">בית</a>
             <a href="about.html">אודות</a>
@@ -167,31 +220,27 @@
     <div class="container">
         <div class="features">
             
-            <a href="zodiac.html" style="text-decoration: none;">
-                <div class="feature-card">
-                    <div>
-                        <div class="feature-icon">✨</div>
-                        <h3>מסרים מהכוכבים</h3>
-                        <p>משחק קלפים אינטראקטיבי וקסום. גלי מה הכוכבים לוחשים על המזל שלך, מה המוזרות הסודית שלך ומה צופן לך עתיד 2026.</p>
-                    </div>
-                    <span class="card-btn">לכניסה למשחק &larr;</span>
-                </div>
-            </a>
-
-            <a href="https://chatgpt.com/g/g-67a9c5176fd8819180582aa8cc8d2cca-mystyqh-bkp-hyd" target="_blank" style="text-decoration: none;">
-                <div class="feature-card">
-                    <div>
-                        <div class="feature-icon">🤖</div>
-                        <h3>מיסטיקה בכף היד 🔮</h3>
-                        <p>"מיסטיקה בכף היד" היא חוויית טארוט דיגיטלית שתעניק לך מסר אישי ומדויק ברגע זה. בחרי קלף אחד או שלושה, וקבלי פרשנות מעמיקה והכוונה להמשך. ✨🔮<br><br>💡 נבנתה גם כהשראה למטפלות - לראות איך בינה מלאכותית יכולה לשרת את הקליניקה.</p>
-                    </div>
-                    <span class="card-btn ai-btn">להתחלת צ'אט &larr;</span>
-                </div>
-            </a>
-
-            <div class="feature-card" style="opacity: 0.6; cursor: default;">
+            <a href="zodiac.html" class="feature-card">
                 <div>
-                    <div class="feature-icon">🎁</div>
+                    <span class="feature-icon">✨</span>
+                    <h3>מסרים מהכוכבים</h3>
+                    <p>משחק קלפים אינטראקטיבי וקסום. גלי מה הכוכבים לוחשים על המזל שלך, מה המוזרות הסודית שלך ומה צופן לך עתיד 2026.</p>
+                </div>
+                <span class="card-btn">לכניסה למשחק &larr;</span>
+            </a>
+
+            <a href="https://chatgpt.com/g/g-67a9c5176fd8819180582aa8cc8d2cca-mystyqh-bkp-hyd" target="_blank" class="feature-card">
+                <div>
+                    <span class="feature-icon">🤖</span>
+                    <h3>מיסטיקה בכף היד 🔮</h3>
+                    <p>"מיסטיקה בכף היד" היא חוויית טארוט דיגיטלית שתעניק לך מסר אישי ומדויק ברגע זה. בחרי קלף אחד או שלושה, וקבלי פרשנות מעמיקה והכוונה להמשך. ✨🔮<br><br>💡 נבנתה גם כהשראה למטפלות - לראות איך בינה מלאכותית יכולה לשרת את הקליניקה.</p>
+                </div>
+                <span class="card-btn ai-btn">להתחלת צ'אט &larr;</span>
+            </a>
+
+            <div class="feature-card" style="opacity: 0.6; cursor: default; border-bottom-color: var(--sand-dark);">
+                <div>
+                    <span class="feature-icon">🎁</span>
                     <h3>בקרוב...</h3>
                     <p>אני מכינה לך עוד הפתעות מרגשות. שווה להישאר מעודכנת!</p>
                 </div>
@@ -201,12 +250,14 @@
     </div>
 
     <footer>
-        <p>
-            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-            <a href="terms.html" style="color: white;">תקנון</a> | 
-            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
-        </p>
+        <p class="brand">פנינה קריוף - לב-לבינה</p>
+        <p>מזקקת את המהות, מחברת את הלב</p>
+        <div class="legal-links">
+            <a href="accessibility.html">הצהרת נגישות</a> | 
+            <a href="terms.html">תקנון</a> | 
+            <a href="privacy.html">מדיניות פרטיות</a>
+        </div>
+        <p style="font-size: 12px; margin-top: 20px; color: #888;">&copy; 2025 כל הזכויות שמורות</p>
     </footer>
 
 </body>
