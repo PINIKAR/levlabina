@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>צור קשר - לב-לבינה</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Assistant:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --sage-green: #9CA18F;
+            --sand-bg: #F8F5F1;
+            --sand-dark: #E7D7C1;
+            --deep-text: #3D4139;
+            --white: #FFFFFF;
+            --accent-gold: #C5A059;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,20 +28,22 @@
 
         body {
             font-family: 'Assistant', sans-serif; 
-            /* רקע שמנת/חול חם ומרגיע */
-            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
-            color: #3A3635; /* אפור-אדמה כהה */
+            background-color: var(--sand-bg);
+            color: var(--deep-text);
             line-height: 1.6;
         }
 
+        h1, h2, h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            color: var(--sage-green);
+        }
+
         header {
-            /* מעבר צבעים של ירוק מרווה */
-            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
+            background-color: var(--sage-green);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            
-            /* הפיכת ההידר ל-STICKY */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky; 
             top: 0; 
             z-index: 1000;
@@ -39,7 +52,6 @@
         .logo {
             max-width: 100px; 
             height: auto;
-            margin-bottom: 0; 
             background: white;
             padding: 0.5rem; 
             border-radius: 10px;
@@ -56,13 +68,13 @@
             margin: 0 1rem; 
             font-weight: 700; 
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease;
             display: inline-block;
         }
 
         nav a:hover, nav a.active {
+            opacity: 0.8;
             text-decoration: underline;
-            transform: translateY(-2px);
         }
 
         .container {
@@ -77,28 +89,28 @@
         }
 
         .page-header h1 {
-            color: #7B8D77; /* ירוק מרווה עמוק */
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
         }
 
         .page-header p {
             font-size: 1.3rem;
-            color: #5A5452;
+            opacity: 0.8;
         }
 
         .contact-section {
-            background: white;
+            background: var(--white);
             padding: 3rem;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             margin-bottom: 2rem;
+            border: 1px solid var(--sand-dark);
         }
 
         .contact-section h2 {
-            color: #CE897B; /* אדמת חמרה */
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
             text-align: center;
         }
 
@@ -110,62 +122,82 @@
         }
 
         .contact-card {
-            /* קוביות הקשר באדמת חמרה */
-            background: linear-gradient(135deg, #DE9C90, #CE897B);
-            color: white;
+            background: var(--white);
             padding: 2.5rem;
-            border-radius: 20px;
+            border-radius: 25px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: block;
-            box-shadow: 0 10px 20px rgba(196, 109, 94, 0.2);
+            border-bottom: 6px solid var(--sage-green);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
         }
 
         .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(196, 109, 94, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
         }
 
         .contact-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+            color: var(--sage-green);
         }
 
         .contact-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 0.5rem;
+            color: var(--sage-green);
         }
 
         .contact-card p {
-            opacity: 0.9;
+            color: var(--deep-text);
+            font-size: 1.05rem;
         }
 
         .info-box {
-            /* רקע מרווה שקוף ועדין */
-            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.1));
+            background: var(--sand-bg);
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
             margin-top: 2rem;
+            border: 2px dashed var(--sand-dark);
         }
 
         .info-box p {
-            font-size: 1.1rem;
-            color: #5A5452;
+            font-size: 1.15rem;
             line-height: 1.8;
         }
 
         footer {
-            /* פוטר חום-אדמה עמוק */
-            background: #3A3635;
-            color: white;
+            padding: 80px 0;
+            border-top: 1px solid var(--sand-dark);
             text-align: center;
-            padding: 2.5rem;
-            margin-top: 4rem;
+            background-color: var(--sand-bg);
+        }
+
+        footer p.brand { 
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800; 
+            font-size: 24px; 
+            color: var(--sage-green); 
+            margin-bottom: 10px; 
+        }
+
+        footer .legal-links a {
+            color: var(--deep-text);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer .legal-links a:hover {
+            color: var(--sage-green);
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.5rem; }
             nav a { display: block; margin: 0.8rem 0; }
             .contact-links { grid-template-columns: 1fr; }
         }
@@ -176,7 +208,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-3GZX11R7X2');
 </script>
 <body>
@@ -184,7 +215,6 @@
         <a href="index.html">
             <img src="logo.png" alt="לב-לבינה" class="logo">
         </a>
-        <br>
         <nav>
             <a href="index.html">בית</a>
             <a href="about.html">אודות</a>
@@ -232,12 +262,14 @@
     </div>
 
     <footer>
-        <p>
-            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-            <a href="terms.html" style="color: white;">תקנון</a> | 
-            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
-        </p>
+        <p class="brand">פנינה קריוף - לב-לבינה</p>
+        <p>מזקקת את המהות, מחברת את הלב</p>
+        <div class="legal-links">
+            <a href="accessibility.html">הצהרת נגישות</a> | 
+            <a href="terms.html">תקנון</a> | 
+            <a href="privacy.html">מדיניות פרטיות</a>
+        </div>
+        <p style="font-size: 12px; margin-top: 20px; color: #888;">&copy; 2025 כל הזכויות שמורות</p>
     </footer>
 </body>
 </html>
