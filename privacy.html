@@ -18,34 +18,34 @@
         }
 
         body {
-            font-family: 'Assistant', sans-serif; /* שימוש בפונט הנקי והקריא */
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            font-family: 'Assistant', sans-serif; 
+            /* רקע שמנת/חול חם ומרגיע */
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            color: #3A3635; /* אפור-אדמה כהה */
             line-height: 1.8;
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            /* מעבר צבעים של ירוק מרווה */
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             
-            /* הפיכת ההידר ל-STICKY */
             position: sticky; 
             top: 0; 
             z-index: 1000;
         }
 
         .logo {
-            max-width: 100px; /* גודל מוקטן כדי להתאים ל-Sticky Header */
+            max-width: 100px; 
             height: auto;
             margin-bottom: 0;
             background: white;
             padding: 0.5rem; 
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
 
         nav {
             margin-top: 1rem;
@@ -54,7 +54,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1rem; /* צמצום המרווחים בתפריט */
+            margin: 0 1rem; 
             font-weight: 700; 
             font-size: 1rem;
             transition: all 0.3s ease;
@@ -78,13 +78,13 @@
         }
 
         .page-header h1 {
-            color: #933ec7;
+            color: #7B8D77; /* ירוק מרווה עמוק */
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
         .page-header .subtitle {
-            color: #666;
+            color: #8FA08B; /* ירוק מרווה בהיר */
             font-size: 1.2rem;
         }
 
@@ -92,20 +92,20 @@
             background: white;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             margin-bottom: 2rem;
         }
 
         .content-section h2 {
-            color: #337cdc;
+            color: #CE897B; /* חמרה רכה */
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            border-right: 4px solid #933ec7;
+            border-right: 4px solid #7B8D77; /* פס צד ירוק מרווה */
             padding-right: 1rem;
         }
 
         .content-section p {
-            color: #555;
+            color: #5A5452; /* אפור-חום רך */
             line-height: 1.9;
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
@@ -116,57 +116,59 @@
         }
 
         .content-section li {
-            color: #555;
+            color: #5A5452;
             margin-bottom: 1rem;
             line-height: 1.8;
             font-size: 1.05rem;
         }
 
         .notice-box {
-            background: #fff3cd;
-            border-right: 4px solid #ffc107;
+            background: #FDFBF7; /* רקע שמנת בהיר */
+            border-right: 4px solid #CE897B; /* חמרה רכה */
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
         }
 
         .notice-box p {
-            color: #856404;
+            color: #5A5452;
             margin: 0.5rem 0;
         }
 
         .notice-box strong {
-            color: #533f03;
+            color: #CE897B; /* חמרה רכה להדגשה */
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, rgba(147, 62, 199, 0.1), rgba(30, 149, 223, 0.1));
+            /* רקע מרווה שקוף ועדין */
+            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.1));
             padding: 2rem;
             border-radius: 15px;
             margin: 2rem 0;
-            border-right: 4px solid #933ec7;
+            border-right: 4px solid #CE897B; /* חמרה רכה */
         }
 
         .highlight-box h3 {
-            color: #933ec7;
+            color: #7B8D77; /* ירוק מרווה */
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
         .highlight-box p {
-            color: #333;
+            color: #3A3635;
             margin: 0.5rem 0;
         }
 
         .highlight-box a {
-            color: #337cdc;
+            color: #CE897B; /* חמרה רכה לקישור */
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .highlight-box a:hover {
-            color: #933ec7;
+            color: #8FA08B; /* ירוק מרווה במעבר עכבר */
             text-decoration: underline;
         }
 
@@ -178,26 +180,28 @@
         }
 
         .info-card {
-            background: linear-gradient(135deg, rgba(147, 62, 199, 0.05), rgba(30, 149, 223, 0.05));
+            /* מרווה שקופה לקוביות מידע */
+            background: linear-gradient(135deg, rgba(143, 160, 139, 0.05), rgba(123, 141, 119, 0.05));
             padding: 1.5rem;
             border-radius: 15px;
-            border-right: 3px solid #933ec7;
+            border-right: 3px solid #7B8D77; /* פס מרווה */
         }
 
         .info-card h3 {
-            color: #337cdc;
+            color: #CE897B; /* חמרה רכה */
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
         }
 
         .info-card p {
-            color: #555;
+            color: #5A5452;
             font-size: 1rem;
             margin: 0;
         }
 
         footer {
-            background: #2c3e50;
+            /* פוטר חום-אדמה עמוק */
+            background: #3A3635;
             color: white;
             text-align: center;
             padding: 2.5rem;
@@ -235,8 +239,7 @@
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -332,17 +335,17 @@
                 <p>לכל שאלה בנושא פרטיות, מחיקת מידע, או בירור, ניתן לפנות:</p>
                 <p>📧 <strong>מייל:</strong> <a href="mailto:pninakar@gmail.com">pninakar@gmail.com</a></p>
                 <p>📞 <strong>טלפון:</strong> <a href="tel:+972548383451">054-8383451</a></p>
-                <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;">
+                <p style="margin-top: 1rem; color: #5A5452; font-size: 0.95rem;">
                     נעשה כל שביכולתנו להשיב בהקדם האפשרי ולטפל בפנייתכם בצורה מקצועית ומכבדת.
                 </p>
             </div>
         </div>
 
         <div class="content-section">
-            <p style="text-align: center; color: #933ec7; font-weight: 600;">
+            <p style="text-align: center; color: #7B8D77; font-weight: 600;">
                 מדיניות פרטיות זו מעודכנת נכון ליום: נובמבר 2025
             </p>
-            <p style="text-align: center; color: #666; margin-top: 1rem;">
+            <p style="text-align: center; color: #5A5452; margin-top: 1rem;">
                 אנו שומרים לעצמנו את הזכות לעדכן מדיניות זו מעת לעת. שינויים מהותיים יפורסמו באתר.
             </p>
         </div>
