@@ -18,31 +18,32 @@
         body {
             /* שימוש בפונט הנקי והקריא */
             font-family: 'Assistant', sans-serif; 
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            /* רקע שמנת/חול חם ומרגיע */
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            color: #3A3635; /* אפור-אדמה כהה */
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            /* מעבר צבעים של ירוק מרווה */
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             
-            /* הפיכת ההידר ל-STICKY */
             position: sticky; 
             top: 0; 
             z-index: 1000;
         }
 
         .logo {
-            max-width: 100px; /* גודל מוקטן כדי להתאים ל-Sticky Header */
+            max-width: 100px; 
             height: auto;
             margin-bottom: 0;
             background: white;
             padding: 0.5rem; 
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -52,7 +53,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1rem; /* צמצום המרווחים בתפריט */
+            margin: 0 1rem; 
             font-weight: 700; 
             font-size: 1rem;
             transition: all 0.3s ease;
@@ -76,14 +77,14 @@
         }
 
         .page-header h1 {
-            color: #933ec7;
+            color: #7B8D77; /* ירוק מרווה עמוק */
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
         .page-header p {
             font-size: 1.3rem;
-            color: #555;
+            color: #5A5452;
         }
 
         .services-grid {
@@ -96,7 +97,7 @@
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -109,12 +110,14 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #933ec7, #1e95df);
+            /* פס עליון חם של חמרה רכה */
+            background: linear-gradient(90deg, #CE897B, #DE9C90);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(147, 62, 199, 0.3);
+            /* צללית מרווה עדינה בריחוף */
+            box-shadow: 0 20px 50px rgba(123, 141, 119, 0.2);
         }
 
         .service-icon {
@@ -123,20 +126,25 @@
         }
 
         .service-card h2 {
-            color: #337cdc;
+            color: #7B8D77; /* ירוק מרווה עמוק */
             font-size: 1.9rem;
             margin-bottom: 1.2rem;
         }
 
         .service-card p {
-            color: #666;
+            color: #5A5452;
             line-height: 1.8;
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
 
+        .service-card strong {
+            color: #CE897B; /* חמרה רכה להדגשות בתוך הכרטיסיות */
+        }
+
         .highlight-section {
-            background: linear-gradient(135deg, #933ec7, #5f5ad7);
+            /* בלוק תחתון בחמרה רכה ומזמינה */
+            background: linear-gradient(135deg, #CE897B, #DE9C90);
             color: white;
             padding: 4rem 2rem;
             border-radius: 30px;
@@ -156,7 +164,7 @@
 
         .cta-btn {
             background: white;
-            color: #933ec7;
+            color: #CE897B; /* טקסט חמרה */
             padding: 1.2rem 3rem;
             border-radius: 50px;
             text-decoration: none;
@@ -164,18 +172,19 @@
             font-size: 1.2rem;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .cta-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            background: #f86173;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            background: #7B8D77; /* רקע מרווה עמוק בריחוף */
             color: white;
         }
 
         footer {
-            background: #2c3e50;
+            /* פוטר חום-אדמה עמוק */
+            background: #3A3635;
             color: white;
             text-align: center;
             padding: 2.5rem;
@@ -190,8 +199,7 @@
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -208,7 +216,7 @@
         <nav>
             <a href="index.html">בית</a>
             <a href="about.html">אודות</a>
-            <a href="services.html" class="active">שירותים</a> <!-- כאן זה מודגש -->
+            <a href="services.html" class="active">שירותים</a>
             <a href="courses.html">קורסים וכלים</a>
             <a href="gifts.html">מתנות והשראה ✨</a>
             <a href="contact.html">צור קשר</a>
@@ -218,7 +226,7 @@
     <div class="container">
         <div class="page-header">
             <h1>מה אני מציעה?</h1>
-            <p>שילוב ייחודי בין עולמות הריפוי, ההעצמה והאינטואיציה – לבין עולם הטכנולוגיה</p>
+            <p>שילוב ייחודי בין עולמות הריפוי, ההעצמה והאינטואיציה - לבין עולם הטכנולוגיה</p>
         </div>
 
         <div class="services-grid">
@@ -232,14 +240,14 @@
             <div class="service-card">
                 <div class="service-icon">🎨</div>
                 <h2>יצירה דיגיטלית</h2>
-                <p>למדו ליצור תכנים, גרפיקה וחומרים ויזואליים בלחיצת כפתור – בלי להיות מעצבים מקצועיים.</p>
+                <p>למדו ליצור תכנים, גרפיקה וחומרים ויזואליים בלחיצת כפתור - בלי להיות מעצבים מקצועיים.</p>
                 <p><strong>מה תלמדו:</strong> כלי עיצוב, יצירת תמונות עם AI, ועריכת וידאו פשוטה</p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">⚡</div>
                 <h2>אוטומציות חכמות</h2>
-                <p>איך לחסוך זמן ולייעל את העבודה שלכם עם כלים טכנולוגיים שמשרתים אתכם – לא להיפך.</p>
+                <p>איך לחסוך זמן ולייעל את העבודה שלכם עם כלים טכנולוגיים שמשרתים אתכם - לא להיפך.</p>
                 <p><strong>דוגמאות:</strong> תזמון פוסטים, ניהול לקוחות, תשלומים אוטומטיים</p>
             </div>
 
@@ -260,7 +268,7 @@
             <div class="service-card">
                 <div class="service-icon">📚</div>
                 <h2>קורסים והדרכות</h2>
-                <p>תכנים מעשיים, מובנים ומותאמים אישית – כי כל אחד לומד אחרת.</p>
+                <p>תכנים מעשיים, מובנים ומותאמים אישית - כי כל אחד לומד אחרת.</p>
                 <p><strong>פורמטים:</strong> קורסים מוקלטים, הדרכות חיות, וליווי 1:1</p>
             </div>
         </div>
