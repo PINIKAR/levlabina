@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://pnina-karayoff.com/">
     
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -19,20 +18,21 @@
     </script>
 
     <style>
-        /* אותו עיצוב כמו דף הבית לשמירה על אחידות */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Assistant', sans-serif; 
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            /* רקע שמנת/חול חם ומרגיע */
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            color: #3A3635;
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            /* מעבר צבעים של ירוק מרווה */
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: sticky; top: 0; z-index: 1000;
         }
 
@@ -42,7 +42,7 @@
             background: white;
             padding: 0.5rem;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 10px;
         }
 
@@ -54,16 +54,28 @@
         nav a:hover, nav a.active { text-decoration: underline; transform: translateY(-2px); }
 
         .page-header {
-            background: linear-gradient(135deg, rgba(147, 62, 199, 0.9), rgba(95, 90, 215, 0.9), rgba(30, 149, 223, 0.9));
+            /* רקע מרווה שקוף ועדין */
+            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.1));
             padding: 4rem 2rem;
             text-align: center;
-            color: white;
+            border-radius: 0 0 30px 30px; /* קצת עגלגלות למטה שיהיה רך */
+            margin-bottom: 2rem;
         }
 
-        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .page-header p { font-size: 1.4rem; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+        .page-header h1 { 
+            color: #7B8D77; /* ירוק מרווה עמוק */
+            font-size: 3rem; 
+            margin-bottom: 1rem; 
+        }
+        
+        .page-header p { 
+            color: #5A5452; /* אפור-חום רך */
+            font-size: 1.4rem; 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 
         .features {
             display: grid;
@@ -75,45 +87,58 @@
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            text-decoration: none; /* כדי שהקישור לא יקבל קו תחתון */
+            text-decoration: none; 
             color: inherit;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
         }
 
         .feature-icon { font-size: 3.5rem; margin-bottom: 1rem; }
-        .feature-card h3 { color: #933ec7; font-size: 1.8rem; margin-bottom: 1rem; }
-        .feature-card p { color: #666; margin-bottom: 1.5rem; }
+        .feature-card h3 { color: #7B8D77; font-size: 1.8rem; margin-bottom: 1rem; }
+        .feature-card p { color: #5A5452; margin-bottom: 1.5rem; }
         
         .card-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #f86173, #ff8a95);
+            /* כפתור באדמת חמרה */
+            background: linear-gradient(135deg, #D37B6C, #C46D5E);
             color: white;
             padding: 0.8rem 2rem;
             border-radius: 50px;
             font-weight: bold;
             text-decoration: none;
-            transition: opacity 0.3s;
+            transition: all 0.3s ease;
             align-self: center;
+            box-shadow: 0 10px 20px rgba(196, 109, 94, 0.2);
+        }
+        
+        .card-btn:hover {
+             box-shadow: 0 15px 40px rgba(196, 109, 94, 0.4);
         }
 
         /* כפתור מיוחד לסוכנת AI */
         .ai-btn {
-            background: linear-gradient(135deg, #10a37f, #2ecc71); /* צבעי ChatGPT */
+            /* ירוק מרווה עמוק לסוכנת ה-AI */
+            background: linear-gradient(135deg, #6C8164, #5A6E52); 
+            box-shadow: 0 10px 20px rgba(90, 110, 82, 0.2);
+        }
+        
+        .ai-btn:hover {
+            box-shadow: 0 15px 40px rgba(90, 110, 82, 0.4);
         }
 
         footer {
-            background: #2c3e50; color: white; text-align: center; padding: 2.5rem; margin-top: 4rem;
+            /* פוטר חום-אדמה עמוק */
+            background: #3A3635; color: white; text-align: center; padding: 2.5rem; margin-top: 4rem;
         }
     </style>
 </head>
@@ -129,7 +154,7 @@
             <a href="about.html">אודות</a>
             <a href="services.html">שירותים</a>
             <a href="courses.html">קורסים וכלים</a>
-            <a href="gifts.html" class="active" style="color: #FFD700;">מתנות והשראה ✨</a>
+            <a href="gifts.html" class="active">מתנות והשראה ✨</a>
             <a href="contact.html">צור קשר</a>
         </nav>
     </header>
@@ -142,7 +167,6 @@
     <div class="container">
         <div class="features">
             
-            <!-- כרטיסייה 1: גלגל המזלות -->
             <a href="zodiac.html" style="text-decoration: none;">
                 <div class="feature-card">
                     <div>
@@ -154,19 +178,17 @@
                 </div>
             </a>
 
-            <!-- כרטיסייה 2: סוכנת ה-AI -->
             <a href="https://chatgpt.com/g/g-67a9c5176fd8819180582aa8cc8d2cca-mystyqh-bkp-hyd" target="_blank" style="text-decoration: none;">
                 <div class="feature-card">
                     <div>
                         <div class="feature-icon">🤖</div>
                         <h3>מיסטיקה בכף היד 🔮</h3>
-                        <p>"מיסטיקה בכף היד" היא חוויית טארוט דיגיטלית שתעניק לך מסר אישי ומדויק ברגע זה. בחרי קלף אחד או שלושה, וקבלי פרשנות מעמיקה והכוונה להמשך. ✨🔮<br><br>💡 נבנתה גם כהשראה למטפלות – לראות איך בינה מלאכותית יכולה לשרת את הקליניקה.</p>
+                        <p>"מיסטיקה בכף היד" היא חוויית טארוט דיגיטלית שתעניק לך מסר אישי ומדויק ברגע זה. בחרי קלף אחד או שלושה, וקבלי פרשנות מעמיקה והכוונה להמשך. ✨🔮<br><br>💡 נבנתה גם כהשראה למטפלות - לראות איך בינה מלאכותית יכולה לשרת את הקליניקה.</p>
                     </div>
                     <span class="card-btn ai-btn">להתחלת צ'אט &larr;</span>
                 </div>
             </a>
 
-            <!-- כרטיסייה 3: מקום פנוי לעתיד -->
             <div class="feature-card" style="opacity: 0.6; cursor: default;">
                 <div>
                     <div class="feature-icon">🎁</div>
