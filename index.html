@@ -7,7 +7,6 @@
     <title>לב-לבינה - מחברת בין עולמות</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
-    
     <link rel="canonical" href="https://pnina-karayoff.com/">
     
     <style>
@@ -18,63 +17,53 @@
         }
 
         body {
-            /* שינוי הפונט לפונט נקי */
             font-family: 'Assistant', sans-serif; 
-            /* רקע שמנת/חול חם ומרגיע במקום אפור קר */
+            /* רקע שמנת/חול חם ומרגיע */
             background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
-            /* צבע טקסט אפור-אדמה כהה וחם */
             color: #3A3635;
             line-height: 1.6;
         }
 
-        /* עיצוב תמונת הפרופיל בהידר */
         .hero-profile-image {
-            width: 150px; /* גודל התמונה */
+            width: 150px; 
             height: 150px;
-            object-fit: cover; /* תיקון העיוות */
-            border-radius: 50%; /* הופך את התמונה לעיגול */
-            margin-bottom: 1.5rem; /* ריווח מתחת לכותרת */
-            /* מוסיף הילה לבנה וצל קטן */
-            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.2); 
+            object-fit: cover; 
+            border-radius: 50%; 
+            margin-bottom: 1.5rem; 
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.15); 
         }
 
         header {
-            /* מעבר צבעים של ירוק מרווה נקי ומרגיע */
+            /* ירוק מרווה נקי ומרגיע */
             background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            
-            /* הפיכת ההידר ל-STICKY */
             position: sticky; 
             top: 0; 
             z-index: 1000;
         }
 
-        .logo-container {
-            display: inline-block;
-        }
+        .logo-container { display: inline-block; }
 
         .logo {
-            max-width: 100px; /* צמצום גודל הלוגו */
+            max-width: 100px; 
             height: auto;
             margin-bottom: 0;
-            background: white; /* רקע לבן ללוגו - נשמר */
+            background: white; 
             padding: 0.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        nav {
-            margin-top: 1rem;
-        }
+        nav { margin-top: 1rem; }
 
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 1rem;
             font-weight: 700;
-            font-size: 1rem; /* גודל פונט קצת יותר קטן */
+            font-size: 1rem; 
             transition: all 0.3s ease;
             display: inline-block;
         }
@@ -85,7 +74,7 @@
         }
 
         .hero {
-            /* רקע ירוק מרווה שמתכתב עם ההידר */
+            /* ירוק מרווה שמתכתב עם ההידר */
             background: linear-gradient(135deg, rgba(143, 160, 139, 0.95), rgba(123, 141, 119, 0.95));
             padding: 6rem 2rem;
             text-align: center;
@@ -93,26 +82,28 @@
             position: relative;
             overflow: hidden;
         }
-        
-        /* ... קוד אנימציות Hero ... */
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            max-width: 900px;
+            margin: 0 auto 1rem auto;
             position: relative;
             z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.8rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.4rem;
+            max-width: 750px;
+            margin: 0 auto 2.5rem auto;
             position: relative;
             z-index: 1;
+            opacity: 0.95;
         }
 
         .cta-button {
-            /* כפתור בצבע אדמת חמרה */
+            /* כפתור בצבע חמרה רכה */
             background: linear-gradient(135deg, #DE9C90, #CE897B);
             color: white;
             padding: 1.2rem 3.5rem;
@@ -124,14 +115,14 @@
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
-            box-shadow: 0 10px 30px rgba(196, 109, 94, 0.4);
+            box-shadow: 0 10px 20px rgba(206, 137, 123, 0.3);
             text-decoration: none;
             display: inline-block;
         }
 
         .cta-button:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(196, 109, 94, 0.6);
+            box-shadow: 0 15px 30px rgba(206, 137, 123, 0.4);
         }
 
         .container {
@@ -142,25 +133,25 @@
 
         .intro {
             text-align: center;
-            margin: 4rem 0;
+            margin: 4rem auto;
+            max-width: 800px;
             padding: 3rem;
             background: white;
             border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
 
         .intro h2 {
-            /* כותרת בירוק מרווה עמוק */
-            color: #7B8D77;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
+            color: #7B8D77; /* ירוק מרווה */
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .intro p {
             font-size: 1.3rem;
             line-height: 1.8;
-            color: #5A5452; /* אפור-חום רך */
-            margin-bottom: 1.5rem;
+            color: #5A5452; 
+            margin-bottom: 1rem;
         }
 
         .features {
@@ -170,55 +161,77 @@
             margin-top: 4rem;
         }
 
-        /* עיצוב עבור קוביות השירותים שהפכנו ללחיצות */
+        /* העיצוב החדש והיוקרתי לקוביות התכונות */
         .feature-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* הוספת אפקט מעבר */
+            transition: all 0.3s ease; 
+            border: 1px solid #E5E0D8; /* מסגרת עדינה מאוד */
+            height: 100%;
         }
         
-        .feature-card a { /* מוודא שכל קישור בתוך הכרטיס אינו מקבל קו תחתון */
+        .feature-card a { 
             text-decoration: none;
             color: inherit;
+            display: block;
+            height: 100%;
         }
 
         .feature-card:hover {
-            transform: scale(1.05); /* הגדלה קלה בריחוף */
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 35px rgba(123, 141, 119, 0.15); /* צללית מרווה רכה */
+            border-color: #8FA08B;
         }
 
-        .feature-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+        /* הבית החדש לאימוג'ים - עיגול מרווה שקוף */
+        .feature-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem auto;
+            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon-wrapper {
+            transform: scale(1.1);
         }
 
         .feature-card h3 {
-            /* כותרת קטנה בירוק מרווה */
-            color: #7B8D77;
+            color: #7B8D77; /* ירוק מרווה */
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
 
         .feature-card p {
-            color: #666;
+            color: #5A5452;
             line-height: 1.7;
         }
 
         footer {
-            /* פוטר חום-אדמה עמוק שיקרקע את הדף */
-            background: #3A3635;
+            background: #3A3635; /* חום-אדמה */
             color: white;
             text-align: center;
             padding: 2.5rem;
             margin-top: 4rem;
         }
 
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover { text-decoration: underline; }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.3rem; }
+            .hero p { font-size: 1.2rem; }
             nav a { display: block; margin: 0.8rem 0; }
         }
     </style>
@@ -238,7 +251,8 @@
         </a>
         <br>
         <nav>
-            <a href="index.html" class="active">בית</a> <a href="about.html">אודות</a>
+            <a href="index.html" class="active">בית</a>
+            <a href="about.html">אודות</a>
             <a href="services.html">שירותים</a>
             <a href="courses.html">קורסים וכלים</a>
             <a href="gifts.html">מתנות והשראה ✨</a>
@@ -248,8 +262,8 @@
 
     <section class="hero" id="home">
         <img src="pnina-profile.jpg" alt="פנינה קריוף - לבלבינה" class="hero-profile-image">
-        <h1>מחברת בין עולמות</h1>
-        <p>טיפול. טכנולוגיה. טרנספורמציה.</p>
+        <h1>הטכנולוגיה לא תחליף את הלב שלכם. תנו לה לעבוד בשבילכם.</h1>
+        <p>עולם הטיפול לא צריך לאבד את הנשמה שלו בגלל הבינה המלאכותית. אני כאן כדי ללמד אתכם איך לחבר בין האינטואיציה שלכם לטכנולוגיה - בלי ז'רגון, בלי סטרס, ובקצב שלכם.</p>
         <a href="services.html" class="cta-button">בואו נתחיל</a>
     </section>
 
@@ -261,38 +275,38 @@
         </div>
 
         <div class="features">
-            <a href="services.html" style="text-decoration: none;">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
+            <div class="feature-card">
+                <a href="services.html">
+                    <div class="feature-icon-wrapper">🤖</div>
                     <h3>בינה מלאכותית</h3>
                     <p>כלים פשוטים ונגישים לעבודה עם AI</p>
-                </div>
-            </a>
+                </a>
+            </div>
             
-            <a href="services.html" style="text-decoration: none;">
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+            <div class="feature-card">
+                <a href="services.html">
+                    <div class="feature-icon-wrapper">🎨</div>
                     <h3>יצירה דיגיטלית</h3>
                     <p>תכנים וגרפיקה בלחיצת כפתור</p>
-                </div>
-            </a>
+                </a>
+            </div>
             
-            <a href="services.html" style="text-decoration: none;">
-                <div class="feature-card">
-                    <div class="feature-icon">💝</div>
+            <div class="feature-card">
+                <a href="services.html">
+                    <div class="feature-icon-wrapper">💝</div>
                     <h3>ליווי אישי</h3>
                     <p>בדרך שמרגישה נכונה ורגישה</p>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>
             &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-            <a href="terms.html" style="color: white;">תקנון</a> | 
-            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
+            <a href="accessibility.html">הצהרת נגישות</a> | 
+            <a href="terms.html">תקנון</a> | 
+            <a href="privacy.html">מדיניות פרטיות</a>
         </p>
     </footer>
 </body>
