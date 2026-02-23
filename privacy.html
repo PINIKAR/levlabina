@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מדיניות פרטיות - לב-לבינה</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Assistant:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="canonical" href="https://pnina-karayoff.com/privacy.html">
     
     <style>
+        :root {
+            --sage-green: #9CA18F;
+            --sage-light: #B4B9A7;
+            --sand-bg: #F8F5F1;
+            --sand-dark: #E7D7C1;
+            --deep-text: #3D4139;
+            --white: #FFFFFF;
+            --accent-gold: #C5A059;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -19,19 +31,22 @@
 
         body {
             font-family: 'Assistant', sans-serif; 
-            /* רקע שמנת/חול חם ומרגיע */
-            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
-            color: #3A3635; /* אפור-אדמה כהה */
+            background-color: var(--sand-bg);
+            color: var(--deep-text);
             line-height: 1.8;
         }
 
+        h1, h2, h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            color: var(--sage-green);
+        }
+
         header {
-            /* מעבר צבעים של ירוק מרווה */
-            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
+            background-color: var(--sage-green);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky; 
             top: 0; 
             z-index: 1000;
@@ -40,7 +55,6 @@
         .logo {
             max-width: 100px; 
             height: auto;
-            margin-bottom: 0;
             background: white;
             padding: 0.5rem; 
             border-radius: 10px;
@@ -57,13 +71,13 @@
             margin: 0 1rem; 
             font-weight: 700; 
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease;
             display: inline-block;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
+            opacity: 0.8;
             text-decoration: underline;
-            transform: translateY(-2px);
         }
 
         .container {
@@ -78,97 +92,85 @@
         }
 
         .page-header h1 {
-            color: #7B8D77; /* ירוק מרווה עמוק */
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
         }
 
         .page-header .subtitle {
-            color: #8FA08B; /* ירוק מרווה בהיר */
+            color: var(--deep-text);
+            opacity: 0.7;
             font-size: 1.2rem;
         }
 
         .content-section {
-            background: white;
+            background: var(--white);
             padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             margin-bottom: 2rem;
+            border-bottom: 6px solid var(--sage-green);
         }
 
         .content-section h2 {
-            color: #CE897B; /* חמרה רכה */
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
-            border-right: 4px solid #7B8D77; /* פס צד ירוק מרווה */
-            padding-right: 1rem;
+            margin-top: 1rem;
         }
 
         .content-section p {
-            color: #5A5452; /* אפור-חום רך */
-            line-height: 1.9;
             margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
         .content-section ul {
-            margin: 1rem 0 1.5rem 2rem;
+            margin: 1rem 2rem 1.5rem 0;
         }
 
         .content-section li {
-            color: #5A5452;
             margin-bottom: 1rem;
-            line-height: 1.8;
             font-size: 1.05rem;
         }
 
         .notice-box {
-            background: #FDFBF7; /* רקע שמנת בהיר */
-            border-right: 4px solid #CE897B; /* חמרה רכה */
+            background: var(--sand-bg);
+            border-right: 4px solid var(--accent-gold);
             padding: 1.5rem;
             margin: 2rem 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-radius: 12px;
         }
 
         .notice-box p {
-            color: #5A5452;
             margin: 0.5rem 0;
+            font-weight: 500;
         }
 
         .notice-box strong {
-            color: #CE897B; /* חמרה רכה להדגשה */
+            color: var(--sage-green);
         }
 
         .highlight-box {
-            /* רקע מרווה שקוף ועדין */
-            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.1));
-            padding: 2rem;
-            border-radius: 15px;
+            background: var(--sand-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
             margin: 2rem 0;
-            border-right: 4px solid #CE897B; /* חמרה רכה */
+            border: 2px dashed var(--sand-dark);
         }
 
         .highlight-box h3 {
-            color: #7B8D77; /* ירוק מרווה */
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
-        .highlight-box p {
-            color: #3A3635;
-            margin: 0.5rem 0;
-        }
-
         .highlight-box a {
-            color: #CE897B; /* חמרה רכה לקישור */
+            color: var(--sage-green);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             transition: color 0.3s ease;
         }
 
         .highlight-box a:hover {
-            color: #8FA08B; /* ירוק מרווה במעבר עכבר */
+            color: var(--deep-text);
             text-decoration: underline;
         }
 
@@ -180,62 +182,55 @@
         }
 
         .info-card {
-            /* מרווה שקופה לקוביות מידע */
-            background: linear-gradient(135deg, rgba(143, 160, 139, 0.05), rgba(123, 141, 119, 0.05));
+            background: var(--sand-bg);
             padding: 1.5rem;
             border-radius: 15px;
-            border-right: 3px solid #7B8D77; /* פס מרווה */
+            border-bottom: 4px solid var(--sage-green);
         }
 
         .info-card h3 {
-            color: #CE897B; /* חמרה רכה */
+            color: var(--accent-gold);
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
         }
 
         .info-card p {
-            color: #5A5452;
             font-size: 1rem;
             margin: 0;
         }
 
         footer {
-            /* פוטר חום-אדמה עמוק */
-            background: #3A3635;
-            color: white;
+            padding: 80px 0;
+            border-top: 1px solid var(--sand-dark);
             text-align: center;
-            padding: 2.5rem;
-            margin-top: 4rem;
+            background-color: var(--sand-bg);
         }
 
-        footer a {
-            color: white;
+        footer p.brand { 
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800; 
+            font-size: 24px; 
+            color: var(--sage-green); 
+            margin-bottom: 10px; 
+        }
+
+        footer .legal-links a {
+            color: var(--deep-text);
             text-decoration: none;
-            transition: opacity 0.3s ease;
+            margin: 0 10px;
+            font-size: 14px;
         }
 
-        footer a:hover {
-            opacity: 0.8;
+        footer .legal-links a:hover {
+            color: var(--sage-green);
             text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2rem;
-            }
-
-            nav a {
-                display: block;
-                margin: 0.8rem 0;
-            }
-
-            .content-section {
-                padding: 2rem;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
+            .page-header h1 { font-size: 2.5rem; }
+            nav a { display: block; margin: 0.8rem 0; }
+            .content-section { padding: 2rem; }
+            .info-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -244,7 +239,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-3GZX11R7X2');
 </script>
 <body>
@@ -252,7 +246,6 @@
         <a href="index.html">
             <img src="logo.png" alt="לב-לבינה" class="logo">
         </a>
-        <br>
         <nav>
             <a href="index.html">בית</a>
             <a href="about.html">אודות</a>
@@ -309,15 +302,15 @@
             <h2>4. זכויותיכם</h2>
             <div class="info-grid">
                 <div class="info-card">
-                    <h3>🔍 צפייה במידע</h3>
+                    <h3>🔍 צפייה</h3>
                     <p>זכותכם לדעת אילו נתונים נשמרים עליכם</p>
                 </div>
                 <div class="info-card">
-                    <h3>✏️ תיקון מידע</h3>
+                    <h3>✏️ תיקון</h3>
                     <p>זכותכם לבקש תיקון מידע שגוי</p>
                 </div>
                 <div class="info-card">
-                    <h3>🗑️ מחיקת מידע</h3>
+                    <h3>🗑️ מחיקה</h3>
                     <p>זכותכם לבקש מחיקת המידע שלכם</p>
                 </div>
                 <div class="info-card">
@@ -335,29 +328,31 @@
                 <p>לכל שאלה בנושא פרטיות, מחיקת מידע, או בירור, ניתן לפנות:</p>
                 <p>📧 <strong>מייל:</strong> <a href="mailto:pninakar@gmail.com">pninakar@gmail.com</a></p>
                 <p>📞 <strong>טלפון:</strong> <a href="tel:+972548383451">054-8383451</a></p>
-                <p style="margin-top: 1rem; color: #5A5452; font-size: 0.95rem;">
+                <p style="margin-top: 1.5rem; opacity: 0.8; font-size: 0.95rem;">
                     נעשה כל שביכולתנו להשיב בהקדם האפשרי ולטפל בפנייתכם בצורה מקצועית ומכבדת.
                 </p>
             </div>
         </div>
 
-        <div class="content-section">
-            <p style="text-align: center; color: #7B8D77; font-weight: 600;">
+        <div class="content-section" style="border-bottom: none; text-align: center;">
+            <p style="color: var(--sage-green); font-weight: 700;">
                 מדיניות פרטיות זו מעודכנת נכון ליום: נובמבר 2025
             </p>
-            <p style="text-align: center; color: #5A5452; margin-top: 1rem;">
+            <p style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.8;">
                 אנו שומרים לעצמנו את הזכות לעדכן מדיניות זו מעת לעת. שינויים מהותיים יפורסמו באתר.
             </p>
         </div>
     </div>
 
     <footer>
-        <p>
-            &copy; 2025 לב-לבינה - כל הזכויות שמורות | פנינה קריוף | 
-            <a href="accessibility.html" style="color: white;">הצהרת נגישות</a> | 
-            <a href="terms.html" style="color: white;">תקנון</a> | 
-            <a href="privacy.html" style="color: white;">מדיניות פרטיות</a>
-        </p>
+        <p class="brand">פנינה קריוף - לב-לבינה</p>
+        <p>מזקקת את המהות, מחברת את הלב</p>
+        <div class="legal-links">
+            <a href="accessibility.html">הצהרת נגישות</a> | 
+            <a href="terms.html">תקנון</a> | 
+            <a href="privacy.html">מדיניות פרטיות</a>
+        </div>
+        <p style="font-size: 12px; margin-top: 20px; color: #888;">&copy; 2025 כל הזכויות שמורות</p>
     </footer>
 </body>
 </html>
