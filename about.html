@@ -18,21 +18,24 @@
         body {
             /* שינוי הפונט לפונט נקי */
             font-family: 'Assistant', sans-serif; 
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #2c3e50;
+            /* רקע שמנת/חול חם ומרגיע */
+            background: linear-gradient(135deg, #FDFBF7 0%, #F5F2EB 100%);
+            /* צבע טקסט אפור-אדמה כהה וחם */
+            color: #3A3635;
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #933ec7 0%, #5f5ad7 50%, #1e95df 100%);
+            /* מעבר צבעים של ירוק מרווה נקי ומרגיע */
+            background: linear-gradient(135deg, #8FA08B 0%, #7B8D77 100%);
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             
             /* הפיכת ההידר ל-STICKY */
             position: sticky; 
             top: 0; 
-            z-index: 1000; /* מוודא שהוא תמיד מעל תוכן אחר */
+            z-index: 1000;
         }
 
         .logo {
@@ -42,7 +45,7 @@
             background: white;
             padding: 0.5rem;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -73,7 +76,8 @@
         .about-hero {
             text-align: center;
             padding: 3rem 2rem;
-            background: linear-gradient(135deg, rgba(147, 62, 199, 0.05), rgba(30, 149, 223, 0.05));
+            /* רקע מרווה שקוף ועדין */
+            background: linear-gradient(135deg, rgba(143, 160, 139, 0.1), rgba(123, 141, 119, 0.1));
             border-radius: 30px;
             margin-bottom: 3rem;
         }
@@ -81,26 +85,30 @@
         .profile-image {
             max-width: 250px;
             border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(147, 62, 199, 0.3);
+            /* צללית ירוק מרווה עדינה לתמונה */
+            box-shadow: 0 10px 30px rgba(123, 141, 119, 0.3);
             margin-bottom: 2rem;
-            object-fit: cover; /* תיקון עיוות התמונה */
+            object-fit: cover;
         }
 
         h1 {
-            color: #933ec7;
+            /* כותרת בירוק מרווה עמוק */
+            color: #7B8D77;
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
         h2 {
-            color: #337cdc;
+            /* כותרות משנה בירוק מרווה עמוק */
+            color: #7B8D77;
             font-size: 2.2rem;
             margin: 3rem 0 1.5rem;
         }
 
         .tagline {
             font-size: 1.5rem;
-            color: #f86173;
+            /* אדמת חמרה מרכזית למשפט המחץ */
+            color: #C46D5E;
             font-weight: bold;
             margin-bottom: 2rem;
         }
@@ -109,7 +117,7 @@
             background: white;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             margin-bottom: 2rem;
         }
 
@@ -117,10 +125,12 @@
             font-size: 1.2rem;
             line-height: 1.9;
             margin-bottom: 1.5rem;
+            color: #5A5452;
         }
 
         .content-section strong {
-            color: #933ec7;
+            /* הדגשות בטקסט בצבע אדמת חמרה */
+            color: #C46D5E;
         }
 
         .journey {
@@ -131,12 +141,13 @@
         }
 
         .journey-item {
-            background: linear-gradient(135deg, #933ec7, #5f5ad7);
+            /* קוביות מסע חמות בצבעי אדמה */
+            background: linear-gradient(135deg, #D37B6C, #C46D5E);
             color: white;
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 20px rgba(196, 109, 94, 0.2);
         }
 
         .journey-item h3 {
@@ -146,17 +157,18 @@
         
         .journey-item p {
             color: white !important;
-            line-height: 1.4 !important; /* מגדיל ריווח שורות בקוביות */
-            font-size: 1.15rem; /* גודל פונט קצת יותר גדול */
+            line-height: 1.4 !important;
+            font-size: 1.15rem;
         }
 
         .journey-item strong {
-            color: white !important; /* תיקון: מחזיר את הצבע ללבן גם כשיש הדגשה */
+            color: white !important;
             font-weight: 700;
         }
 
         footer {
-            background: #2c3e50;
+            /* פוטר חום-אדמה עמוק */
+            background: #3A3635;
             color: white;
             text-align: center;
             padding: 2.5rem;
@@ -169,8 +181,7 @@
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZX11R7X2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -186,7 +197,7 @@
         <br>
         <nav>
             <a href="index.html">בית</a>
-            <a href="about.html" class="active">אודות</a> <!-- כאן זה מודגש -->
+            <a href="about.html" class="active">אודות</a>
             <a href="services.html">שירותים</a>
             <a href="courses.html">קורסים וכלים</a>
             <a href="gifts.html">מתנות והשראה ✨</a>
@@ -198,14 +209,14 @@
         <div class="about-hero">
             <img src="pnina-profile.jpg" alt="פנינה קריוף" class="profile-image">
             <h1>נעים להכיר, אני פנינה</h1>
-            <p class="tagline">אני לא מלמדת טכנולוגיה – אני מלמדת אנשים איך לא לפחד ממנה</p>
+            <p class="tagline">אני לא מלמדת טכנולוגיה - אני מלמדת אנשים איך לא לפחד ממנה</p>
         </div>
 
         <div class="content-section">
             <h2>המסע שלי</h2>
-            <p>בעשר השנים האחרונות ליוויתי עשרות אנשים במסעות של ריפוי, צמיחה והתמרה – דרך <strong>NLP, טארוט, נומרולוגיה, העיצוב האנושי</strong> ועוד.</p>
+            <p>בעשר השנים האחרונות ליוויתי עשרות אנשים במסעות של ריפוי, צמיחה והתמרה - דרך <strong>NLP, טארוט, נומרולוגיה, העיצוב האנושי</strong> ועוד.</p>
             
-            <p>אבל עכשיו אני פונה גם אליכם – למטפלות ולמטפלים, ליוצרות וליוצרים, לכל מי שפועל מהלב ורוצה להשפיע – ומרגיש שהעולם הדיגיטלי רץ קדימה, ורק הוא נשאר קצת מאחור.</p>
+            <p>אבל עכשיו אני פונה גם אליכם - למטפלות ולמטפלים, ליוצרות וליוצרים, לכל מי שפועל מהלב ורוצה להשפיע - ומרגיש שהעולם הדיגיטלי רץ קדימה, ורק הוא נשאר קצת מאחור.</p>
 
             <p>בינה מלאכותית, GPT, ציור דיגיטלי, אוטומציות, אפליקציות... זה נשמע מרוחק, מורכב, טכני.</p>
             
@@ -213,7 +224,7 @@
 
             <p>אני מגיעה מהעולם שלכם. מכירה את הדילמות, את הרגישות, את האינטואיציה, את הנטייה לדחות את הטכני לטובת האנושי.</p>
             
-            <p><strong>וזה בדיוק מה שאני מחברת:</strong> בין עומק לבין חדשנות. בין אינטואיציה לרובוטים. בין לב פתוח – לכלי שמקצר לכם את הדרך.</p>
+            <p><strong>וזה בדיוק מה שאני מחברת:</strong> בין עומק לבין חדשנות. בין אינטואיציה לרובוטים. בין לב פתוח - לכלי שמקצר לכם את הדרך.</p>
         </div>
 
         <div class="content-section">
