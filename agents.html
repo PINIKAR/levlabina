@@ -3,165 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>לב-לבינה | סוכני בינה מלאכותית בהתאמה אישית</title>
+    <title>לב-לבינה | סוכני AI - הצוות הדיגיטלי החדש שלכם</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Heebo:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700;800&family=Heebo:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --sage-green: #9CA18F;
-            --accent-gold: #C5A059;
-            --sand-bg: #F8F5F1;
-            --deep-text: #3D4139;
-        }
-        body { font-family: 'Assistant', sans-serif; background-color: var(--sand-bg); color: var(--deep-text); scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, #F8F5F1 0%, #E8E2D9 100%); }
-        .btn-primary { background-color: var(--accent-gold); color: white; transition: all 0.3s ease; }
-        .btn-primary:hover { transform: translateY(-2px); background-color: #b38f4d; }
-        header { background-color: var(--sage-green); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { max-width: 90px; background: white; padding: 5px; border-radius: 8px; margin: 0 auto; }
-        nav { margin-top: 10px; }
-        nav a { color: white; margin: 0 10px; font-weight: 700; font-size: 0.9rem; text-decoration: none; }
-        .card-icon { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem; }
+        :root { --sage: #9CA18F; --gold: #C5A059; --sand: #F8F5F1; --dark: #3D4139; }
+        body { font-family: 'Assistant', sans-serif; background-color: var(--sand); color: var(--dark); scroll-behavior: smooth; }
+        .hero-title { font-family: 'Heebo', sans-serif; line-height: 1.1; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3); }
+        .btn-gold { background: linear-gradient(135deg, #C5A059 0%, #E2C792 100%); transition: all 0.3s ease; }
+        .btn-gold:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
+        header { background: var(--sage); padding: 15px; position: sticky; top: 0; z-index: 100; }
+        .logo-box { background: white; padding: 5px 15px; border-radius: 12px; display: inline-block; }
     </style>
 </head>
 <body class="antialiased">
 
-    <header>
-        <a href="index.html"><img src="logo.png" alt="לב-לבינה" class="logo"></a>
-        <nav>
+    <header class="flex justify-between items-center px-8">
+        <a href="index.html" class="logo-box"><img src="logo.png" alt="לב-לבינה" class="h-10"></a>
+        <nav class="hidden md:block text-white font-bold space-x-reverse space-x-6">
             <a href="index.html">בית</a>
             <a href="services.html">שירותים</a>
-            <a href="contact.html">צור קשר</a>
+            <a href="#process">איך זה עובד?</a>
         </nav>
     </header>
 
-    <section class="pt-24 pb-20 px-6 hero-gradient text-center">
+    <section class="py-24 px-6 text-center bg-white">
         <div class="container mx-auto max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-[#9CA18F]">
-                להפוך טכנולוגיה לבינה <br>
-                <span class="text-[#C5A059]">עם סוכני AI חכמים</span>
+            <span class="text-gold font-bold tracking-widest uppercase text-sm mb-4 block">The Future of Soft Business</span>
+            <h1 class="hero-title text-5xl md:text-7xl font-black mb-6 text-dark">
+                להפסיק לעבוד <span class="text-sage">אצל</span> הטכנולוגיה.<br>
+                לתת לה לעבוד <span class="text-gold">בשבילכם</span>.
             </h1>
-            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                ב"לב-לבינה" אנחנו בונים עבורכם "עובדים דיגיטליים" שנשארים איתכם לנצח. סוכנים אוטונומיים שחוסכים לכם זמן יקר, מייעלים תהליכים ועובדים בדיוק לפי הערכים שלכם.
+            <p class="text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+                אנחנו בונים עבורכם סוכני AI אוטונומיים שחיים בתוך העסק שלכם, לומדים את הקול שלכם ומבצעים משימות מורכבות בזמן שאתם מתפנים למה שבאמת חשוב – הלב.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#contact" class="btn-primary px-10 py-4 rounded-xl text-lg font-bold shadow-lg">בואו נבנה לכם סוכן</a>
-                <a href="#about" class="bg-white border-2 border-[#9CA18F] text-[#9CA18F] px-10 py-4 rounded-xl text-lg font-bold hover:bg-gray-50 transition">מה זה בעצם סוכן?</a>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#contact" class="btn-gold text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl">אני רוצה לבנות סוכן</a>
+                <a href="#comparison" class="text-sage font-bold flex items-center justify-center gap-2 border-b-2 border-sage pb-1">ראו את ההבדל <i class="fas fa-arrow-down"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 px-6 bg-white">
-        <div class="container mx-auto max-w-5xl">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#9CA18F] mb-4">יותר מבוט, פחות מתוכנה - שותף לדרך</h2>
-                <p class="text-lg text-gray-600">סוכן AI הוא ישות דיגיטלית שמסוגלת לבצע פעולות מורכבות במקומכם.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-right">
-                <div class="p-8 border-b-4 border-[#C5A059] bg-[#F8F5F1] rounded-2xl">
-                    <i class="fas fa-brain card-icon"></i>
-                    <h3 class="font-bold text-xl mb-3">קבלת החלטות</h3>
-                    <p>הסוכן לא רק "עונה", הוא מנתח מידע ומחליט מה הצעד הבא הנכון לפי ההנחיות שלכם.</p>
+    <section id="comparison" class="py-20 bg-gray-50 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">העסק שלכם: לפני ואחרי הסוכן</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-white rounded-3xl border-r-8 border-gray-300 shadow-sm opacity-70">
+                    <h3 class="font-bold text-xl mb-4 text-gray-400">היום (ידני)</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li>❌ שעות על ניסוח מיילים ופוסטים</li>
+                        <li>❌ ניסיון נואש לסכם פגישות מהזיכרון</li>
+                        <li>❌ תחושת עומס ומרדף אחרי ה"טכני"</li>
+                        <li>❌ "שיעורי בית" שנשארים לסוף היום</li>
+                    </ul>
                 </div>
-                <div class="p-8 border-b-4 border-[#9CA18F] bg-[#F8F5F1] rounded-2xl">
-                    <i class="fas fa-link card-icon"></i>
-                    <h3 class="font-bold text-xl mb-3">חיבור לעולם</h3>
-                    <p>הסוכן מתחבר למיילים, ליומן ולמסמכים שלכם ומבצע פעולות בעולם האמיתי.</p>
-                </div>
-                <div class="p-8 border-b-4 border-gray-800 bg-[#F8F5F1] rounded-2xl">
-                    <i class="fas fa-sync card-icon"></i>
-                    <h3 class="font-bold text-xl mb-3">שיפור מתמיד</h3>
-                    <p>ככל שהסוכן עובד יותר, הוא לומד את הסגנון שלכם והופך למדויק וחד יותר.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6 bg-[#F8F5F1]">
-        <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl font-bold text-[#9CA18F] mb-12">איך זה נראה בפועל?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-right">
-                <div class="flex gap-4 items-start bg-white p-6 rounded-xl shadow-sm">
-                    <div class="bg-[#C5A059] text-white p-3 rounded-lg"><i class="fas fa-comments"></i></div>
-                    <div>
-                        <h4 class="font-bold text-lg">סוכן "אינטייק" וקבלת קהל</h4>
-                        <p class="text-gray-600 text-sm">סורק פניות, מסווג אותן לפי דחיפות ומכין לכם סיכום מקצועי לפני כל פגישה.</p>
-                    </div>
-                </div>
-                <div class="flex gap-4 items-start bg-white p-6 rounded-xl shadow-sm">
-                    <div class="bg-[#9CA18F] text-white p-3 rounded-lg"><i class="fas fa-pen-nib"></i></div>
-                    <div>
-                        <h4 class="font-bold text-lg">סוכנת תהודה לתוכן</h4>
-                        <p class="text-gray-600 text-sm">הופכת הקלטות קוליות או ראשי פרקים לפוסטים מעוררי השראה בטון האישי שלכם.</p>
-                    </div>
+                <div class="p-8 bg-white rounded-3xl border-r-8 border-gold shadow-xl">
+                    <h3 class="font-bold text-xl mb-4 text-gold">עם סוכן AI</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li>✅ פוסטים וניוזלטרים מוכנים ב-60 שניות</li>
+                        <li>✅ סיכומי פגישות ואבחונים אוטומטיים</li>
+                        <li>✅ ראש שקט ליצירה ולטיפול</li>
+                        <li>✅ העסק עובד גם כשאתם ישנים</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 px-6 bg-white">
-        <div class="container mx-auto max-w-4xl text-right">
-            <div class="bg-[#F8F5F1] rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row-reverse">
-                <div class="md:w-1/2 bg-[#9CA18F] p-12 text-white">
-                    <h2 class="text-3xl font-bold mb-6">מוכנים לבנות סוכן?</h2>
-                    <p class="mb-8 opacity-90">השאירו פרטים ונחזור אליכם לשיחת אפיון שבה נבין יחד איזה סוכן ייתן לכם את המקסימום חופש.</p>
-                    <div class="space-y-4 text-sm">
-                        <p><i class="fas fa-envelope ml-2"></i> pninakar@gmail.com</p>
-                        <p><i class="fas fa-phone ml-2"></i> 054-8383451</p>
+    <section class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-4xl font-black mb-16 text-sage">הכירו את הצוות החדש שלכם</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-right">
+                <div class="glass-card p-10 rounded-3xl hover:bg-white transition-all group">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+                        <i class="fas fa-feather-alt text-gold group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">סוכנת התהודה</h3>
+                    <p class="text-gray-600 mb-6">הופכת מחשבה גולמית לתוכן מזוקק. פוסטים, מיילים ומאמרים - בטון האישי והמדויק שלכם.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl hover:bg-white transition-all group">
+                    <div class="w-16 h-16 bg-sage/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-sage transition-colors">
+                        <i class="fas fa-stethoscope text-sage group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">סוכן האבחון</h3>
+                    <p class="text-gray-600 mb-6">סורק שאלוני אינטייק או סיכומי פגישות ומגיש לכם תמצית אבחונית ונקודות עבודה תוך שניות.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl hover:bg-white transition-all group">
+                    <div class="w-16 h-16 bg-dark/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-dark transition-colors">
+                        <i class="fas fa-tasks text-dark group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">סוכן התפעול</h3>
+                    <p class="text-gray-600 mb-6">מנהל עבורכם את הלוגיסטיקה, מתאם פגישות, מעדכן את ה-CRM ושומר על העסק מתוקתק.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-gray-50 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row-reverse border border-gray-100">
+                <div class="md:w-2/5 bg-sage p-12 text-white flex flex-col justify-center">
+                    <h2 class="text-4xl font-black mb-6">בואו נצא לדרך</h2>
+                    <p class="text-lg opacity-90 mb-8">לאחר מילוי הפרטים, נעבור לשיחה אישית בוואטסאפ לאפיון הסוכן הראשון שלכם.</p>
+                    <div class="space-y-4">
+                        <p class="flex items-center gap-3"><i class="fas fa-check-circle"></i> פתרון מותאם אישית</p>
+                        <p class="flex items-center gap-3"><i class="fas fa-check-circle"></i> חיסכון של 10+ שעות בשבוע</p>
+                        <p class="flex items-center gap-3"><i class="fas fa-check-circle"></i> בעלות מלאה על הסוכן</p>
                     </div>
                 </div>
-                <div class="md:w-1/2 p-10">
-                    <form id="agentForm" class="space-y-4">
-                        <input type="text" name="name" id="name" placeholder="שם מלא" class="w-full p-3 rounded-lg border border-gray-200" required>
-                        <input type="text" name="contact" id="contactInfo" placeholder="טלפון / אימייל" class="w-full p-3 rounded-lg border border-gray-200" required>
-                        <textarea name="message" id="message" rows="3" placeholder="איזה תהליך הייתם רוצים שהסוכן יבצע עבורכם?" class="w-full p-3 rounded-lg border border-gray-200"></textarea>
-                        <button type="submit" id="submitBtn" class="btn-primary w-full py-4 rounded-xl font-bold text-lg">שליחת פנייה</button>
-                        <p id="formStatus" class="text-center text-xs mt-2 text-gray-500 hidden italic">מעבד נתונים...</p>
+                <div class="md:w-3/5 p-12 text-right">
+                    <form id="hybridForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">שם מלא</label>
+                            <input type="text" id="formName" class="w-full bg-white border border-gray-200 p-4 rounded-2xl focus:border-gold outline-none" placeholder="מי אתם?" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">תחום עיסוק</label>
+                            <input type="text" id="formBiz" class="w-full bg-white border border-gray-200 p-4 rounded-2xl focus:border-gold outline-none" placeholder="איזה עסק אנחנו משדרגים?">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">מה הסוכן הראשון שתרצו?</label>
+                            <textarea id="formGoal" rows="3" class="w-full bg-white border border-gray-200 p-4 rounded-2xl focus:border-gold outline-none" placeholder="ספרו לי על משימה שגוזלת לכם זמן..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-gold w-full text-white py-5 rounded-2xl font-bold text-xl">שליחה ותיאום בוואטסאפ</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer class="py-12 bg-gray-50 text-center border-t border-gray-100">
+        <p class="text-sage font-black text-2xl mb-2">לב-לבינה</p>
+        <p class="text-gray-400 text-sm">מרכז להטמעת בינה מלאכותית בעולם הטיפול, האימון והעסקים הרכים.</p>
+    </footer>
+
     <script>
-        document.getElementById('agentForm').addEventListener('submit', function(e) {
+        document.getElementById('hybridForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const status = document.getElementById('formStatus');
-            
-            btn.disabled = true;
-            status.classList.remove('hidden');
-            status.innerText = "שולח נתונים ומעביר לוואטסאפ...";
+            const name = document.getElementById('formName').value;
+            const biz = document.getElementById('formBiz').value;
+            const goal = document.getElementById('formGoal').value;
+            const phone = "972548383451";
 
-            const formData = {
-                name: document.getElementById('name').value,
-                contact: document.getElementById('contactInfo').value,
-                message: document.getElementById('message').value
-            };
-
-            // שליחה ל-FormSubmit
+            // 1. שליחה ל-FormSubmit (ליד למייל)
             fetch("https://formsubmit.co/ajax/pninakar@gmail.com", {
                 method: "POST",
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                // מעבר לוואטסאפ בכל מקרה (גם אם המייל מתעכב)
-                const text = `היי פנינה, אני רוצה לבנות סוכן AI!%0Aשם: ${formData.name}%0Aליצירת קשר: ${formData.contact}%0Aפרטים: ${formData.message}`;
-                window.open(`https://wa.me/972548383451?text=${text}`, '_blank');
-                
-                status.innerText = "נשלח בהצלחה!";
-                document.getElementById('agentForm').reset();
-                btn.disabled = false;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                status.innerText = "הייתה תקלה במייל, מעביר לוואטסאפ...";
-                window.open(`https://wa.me/972548383451?text=ליד סוכנים: ${formData.name}`, '_blank');
-                btn.disabled = false;
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, biz, goal, _subject: "ליד חדש לסוכן AI" })
             });
+
+            // 2. הפניה לוואטסאפ
+            const message = `היי פנינה, הגעתי מדף הסוכנים!%0Aשם: ${name}%0Aעסק: ${biz}%0Aהמטרה: ${goal}`;
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
         });
     </script>
 </body>
