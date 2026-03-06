@@ -3,69 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>לב-לבינה | הצוות הדיגיטלי שלך - סוכני AI בהתאמה אישית</title>
+    <title>לב לבינה | הצוות הדיגיטלי שלך - סוכני AI בהתאמה אישית</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700;900&family=Heebo:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Heebo:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --p-dark: #0F0F0F; --p-gray: #1A1A1A; --gold: #C5A059; --gold-light: #E2C792; --sage: #9CA18F; }
-        body { font-family: 'Assistant', sans-serif; background-color: var(--p-dark); color: white; line-height: 1.8; }
-        .h-black { font-family: 'Heebo', sans-serif; font-weight: 900; }
-        .btn-premium { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); color: #000; box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3); transition: all 0.3s; }
-        .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(197, 160, 89, 0.5); }
-        .card-premium { background: var(--p-gray); border: 1px solid rgba(255,255,255,0.05); border-radius: 2rem; transition: all 0.3s; }
-        .card-premium:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .text-gradient { background: linear-gradient(to left, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        :root {
+            --premium-dark: #121212;
+            --premium-bg: #1A1A1A;
+            --gold: #C5A059;
+            --gold-light: #E2C792;
+            --sage: #9CA18F;
+            --text-gray: #A0A0A0;
+        }
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--premium-dark);
+            color: white;
+            scroll-behavior: smooth;
+        }
+        
+        /* פונט כותרות עוצמתי */
+        .h-black { font-family: 'Heebo', sans-serif; font-weight: 900; line-height: 1.1; }
+
+        /* כפתור פרימיום זהב מנצנץ */
+        .btn-premium {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(197, 160, 89, 0.5);
+        }
+
+        /* כרטיסיות כהות עם אפקט מעבר */
+        .card-dark {
+            background: var(--premium-bg);
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.4s ease;
+        }
+        .card-dark:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(197, 160, 89, 0.1);
+        }
+
+        /* בר המוטו המעוצב בשחור-זהב */
+        .motto-bar {
+            background: rgba(197, 160, 89, 0.05);
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 2.5rem 0;
+            margin: 4rem 0;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--gold-light);
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* תגית (Badge) מעוצבת */
+        .badge-premium {
+            background-color: rgba(197, 160, 89, 0.1);
+            color: var(--gold-light);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        .icon-box {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            text-shadow: 0 2px 10px rgba(197, 160, 89, 0.3);
+        }
+
+        /* עיצוב הטופס */
+        .form-input {
+            width: 100%; padding: 1.25rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px; color: white;
+            outline: none; transition: all 0.3s;
+        }
+        .form-input:focus { border-color: var(--gold); background: rgba(255, 255, 255, 0.05); }
     </style>
 </head>
 <body class="antialiased text-right">
 
-    <section class="pt-32 pb-20 px-6 text-center">
-        <div class="container mx-auto max-w-5xl">
-            <h1 class="h-black text-5xl md:text-8xl mb-8">
+    <nav class="fixed top-0 w-full bg-black/60 backdrop-blur-md z-50 border-b border-white/5 px-8">
+        <div class="container mx-auto py-4 flex justify-between items-center">
+            <div class="text-2xl h-black tracking-tighter text-gold">לב לבינה</div>
+            <div class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-white/80">
+                <a href="#concept" class="hover:text-gold transition-colors active:text-gold">הקונספט</a>
+                <a href="#agents" class="hover:text-gold transition-colors">הסוכנים</a>
+                <a href="#contact" class="hover:text-gold transition-colors">בואו נבנה צוות</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-48 pb-24 px-6 overflow-hidden bg-black">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        
+        <div class="container mx-auto text-center max-w-5xl relative z-10">
+            <div class="badge-premium mb-8">Personal AI Agents</div>
+            <h1 class="h-black text-5xl md:text-8xl mb-12LEADING-NONE">
                 להפסיק לעבוד <span class="text-sage">אצל</span> העסק.<br>
-                להתחיל לנהל <span class="text-gradient">אימפריה רכה.</span>
+                לנהל <span class="text-gradient" style="background: linear-gradient(to left, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">אימפריה רכה.</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto font-light">
-                סוכני AI הם לא רק "טכנולוגיה". הם העובדים החדשים בצוות שלכם. הם לומדים את הקול שלכם, את שיטת הטיפול שלכם ואת ה-DNA העסקי שלכם - ומבצעים עבורכם את כל העבודה השחורה.
+            <p class="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl mx-auto font-light leading-relaxed">
+                סוכני AI הם לא רק טכנולוגיה. הם העובדים החדשים בצוות שלכם. 
+                הם לומדים את הקול שלכם, את שיטת הטיפול ואת ה-DNA העסקי - ומבצעים עבורכם את העבודה ששורפת לכם זמן.
             </p>
-            <a href="#contact" class="btn-premium px-16 py-6 rounded-2xl text-2xl font-black">בואו נבנה לכם צוות דיגיטלי</a>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#contact" class="btn-premium px-14 py-6 rounded-3xl text-2xl font-black shadow-2xl">בואו נבנה לכם צוות דיגיטלי</a>
+            </div>
+            
+            <div class="motto-bar mx-auto max-w-4xl">
+                "אני לא מלמדת טכנולוגיה - אני מלמדת איך להרגיש איתה בבית"
+            </div>
         </div>
     </section>
 
-    <section class="py-24 bg-[#0A0A0A] px-6">
+    <section id="concept" class="py-32 px-6 bg-[#0F0F0F]">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="h-black text-4xl md:text-6xl mb-12">למה רוב האנשים מתייאשים מה-AI?</h2>
+            <p class="text-xl md:text-2xl font-light text-gray-400 leading-relaxed mb-16">
+                כי הם מנסים "לדבר" אליו בכל פעם מחדש. הם שורפים שעות על הסברים, הנחיות ודיוקים, 
+                ובסוף מקבלים תוצר שנראה כמו רובוט. <br><br>
+                <span class="font-bold text-sage border-b-2 border-sage/20 pb-1">הסוד הוא לא בשיחה. הסוד הוא בבנייה.</span>
+            </p>
+            <div class="grid md:grid-cols-2 gap-10 text-right">
+                <div class="p-10 card-dark border-white/5">
+                    <h3 class="font-black text-2xl mb-6 text-gray-500">הדרך הישנה:</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">להסביר לצ'אט בכל פעם מי אתם, מה אתם עושים ואיך אתם רוצים שזה יישמע. זה מעייף, מתסכל ושורף זמן.</p>
+                </div>
+                <div class="p-10 card-dark border-gold/30 shadow-[0_0_30px_rgba(197,160,89,0.05)]">
+                    <h3 class="font-black text-2xl mb-6 text-gold-light">הדרך של לב לבינה:</h3>
+                    <p class="text-white font-medium text-lg leading-relaxed">סוכן AI שמוגדר מראש עם ה-DNA שלכם. הוא כבר יודע הכל. אתם רק נותנים לו חומר גלם, והוא מוציא יהלומים.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agents" class="py-32 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="h-black text-4xl md:text-5xl text-center mb-4 text-gold">הכירו את העובדים החדשים שלכם</h2>
-            <p class="text-center text-gray-500 mb-20 text-xl">כל סוכן נבנה אישית סביב הידע והניסיון שלכם.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="card-premium p-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <i class="fas fa-pen-fancy text-4xl text-gold"></i>
-                        <span class="text-xs font-bold border border-gold/30 text-gold px-3 py-1 rounded-full uppercase">Marketing & Content</span>
+            <div class="text-center mb-24 relative">
+                <div class="absolute inset-0 bg-gold/5 blur-3xl rounded-full"></div>
+                <h2 class="h-black text-4xl md:text-7xl mb-6 text-white z-10 relative">העובדים החדשים שלכם</h2>
+                <p class="text-2xl text-gray-400 font-light z-10 relative">כל סוכן נבנה אישית סביב הידע והניסיון שלכם.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div class="card-dark p-12 flex flex-col hover:border-sage transition-all">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="icon-box">✍️</div>
+                        <span class="badge-premium" style="color: var(--sage); background: rgba(156, 161, 143, 0.1);">Marketing & Content</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">סוכנת ה"תהודה" לתוכן</h3>
-                    <p class="text-gray-400 mb-6">אתם שולחים הקלטה קולית של 2 דקות עם רעיון. הסוכנת מזקקת אותו, מוציאה פוסט לפייסבוק, מאמר לבלוג וניוזלטר - כולם בטון המדויק שלכם. בלי "AI-Glish", בלי קלישאות.</p>
-                    <ul class="text-sm space-y-2 text-gray-500">
-                        <li><i class="fas fa-check text-gold ml-2"></i> כתיבה ב-DNA האישי שלכם</li>
+                    <h3 class="text-3xl font-black mb-6 text-sage">סוכנת ה"תהודה" לתוכן</h3>
+                    <p class="text-lg text-gray-300 mb-10 leading-relaxed">
+                        אתם שולחים הקלטה קולית של 2 דקות עם רעיון גולמי. הסוכנת מזקקת אותו, מוציאה פוסט לפייסבוק, מאמר לבלוג וניוזלטר - כולם בטון המדויק שלכם. בלי קלישאות ובלי "AI-Glish".
+                    </p>
+                    <ul class="space-y-4 mt-auto border-t border-white/5 pt-8 text-gray-400 font-medium">
+                        <li><i class="fas fa-check text-gold ml-2"></i> כתיבה ב-DNA האישי והייחודי שלכם</li>
                         <li><i class="fas fa-check text-gold ml-2"></i> התאמה אוטומטית לכל הפלטפורמות</li>
+                        <li><i class="fas fa-check text-gold ml-2"></i> שמירה על הלב הטיפולי בתוך המסר</li>
                     </ul>
                 </div>
 
-                <div class="card-premium p-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <i class="fas fa-user-md text-4xl text-sage"></i>
-                        <span class="text-xs font-bold border border-sage/30 text-sage px-3 py-1 rounded-full uppercase">Clinic Management</span>
+                <div class="card-dark p-12 flex flex-col hover:border-gold transition-all">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="icon-box">🩺</div>
+                        <span class="badge-premium">Clinic Management</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">סוכן ה"אינטייק" והאבחון</h3>
-                    <p class="text-gray-400 mb-6">הסוכן סורק שאלוני פנייה או סיכומי פגישות, מזהה דפוסי התנהגות, מסכם נקודות קריטיות ומכין לכם "דף הכנה" לטיפול הבא. אתם מגיעים למפגש כשאתם כבר בתוך עומק התהליך.</p>
-                    <ul class="text-sm space-y-2 text-gray-500">
-                        <li><i class="fas fa-check text-sage ml-2"></i> חיסכון של שעות בעיבוד מידע</li>
-                        <li><i class="fas fa-check text-sage ml-2"></i> שמירה קפדנית על פרטיות</li>
+                    <h3 class="text-3xl font-black mb-6 text-gold-light">סוכן ה"אינטייק" והאבחון</h3>
+                    <p class="text-lg text-gray-300 mb-10 leading-relaxed">
+                        הסוכן סורק שאלוני פנייה או סיכומי פגישות (ללא פרטים מזהים), מזהה דפוסים, מסכם נקודות קריטיות ומכין לכם "דף הכנה" לטיפול הבא. אתם מגיעים למפגש כשאתם כבר בתוך עומק התהליך.
+                    </p>
+                    <ul class="space-y-4 mt-auto border-t border-white/5 pt-8 text-gray-400 font-medium">
+                        <li><i class="fas fa-check text-sage ml-2"></i> חיסכון של שעות בעיבוד וניתוח מידע</li>
+                        <li><i class="fas fa-check text-sage ml-2"></i> זיהוי תובנות עומק רפלקטיביות</li>
+                        <li><i class="fas fa-check text-sage ml-2"></i> ארגון הקליניקה בצורה שקטה וחכמה</li>
                     </ul>
                 </div>
 
-                <div class="card-premium p-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <i class="fas fa-search text-4xl text-gold-light"></i>
-                        <span class="text-xs font-bold border border-gold-light/30 text-gold-light px-3 py-1
+                <div class="card-dark p-12 flex flex-col hover:border-sage transition-all">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="icon-box">🔍</div>
+                        <span class="badge-premium" style="color: var(--sage); background: rgba(156, 161, 143, 0.1);">Knowledge & Research</span>
+                    </div>
+                    <h3 class="text-3xl font-black mb-6 text-sage">סוכן "זיקוק הידע"</h3>
+                    <p class="text-lg text-gray-300 mb-10 leading-relaxed">
+                        יש לכם הררי חומרים, קורסים או מאמרים שכתבתם? הסוכן הזה הופך לספרייה החיה שלכם. שאלו אותו כל שאלה על המתודולוגיה שלכם, והוא יענה לכם בדיוק מתוך הידע הצבור שלכם.
+                    </p>
+                    <ul class="space-y-4 mt-auto border-t border-white/5 pt-8 text-gray-400 font-medium">
+                        <li><i class="fas fa-check text-gold ml-2"></i> הנגשה מיידית של כל גוף הידע שלכם</li>
+                        <li><i class="fas fa-check text-gold ml-2"></i> עזרה בבניית קורסים ותוכניות ליווי</li>
+                        <li><i class="fas fa-check text-gold ml-2"></i> דיוק מסרים מבוסס מחקר אישי</li>
+                    </ul>
+                </div>
+
+                <div class="card-dark p-12 bg-sage/10 border-sage/20 flex flex-col items-center justify-center text-center group hover:border-gold transition-all">
+                    <div class="text-6xl mb-8 group-hover:scale-110 transition-transform">🚀</div>
+                    <h3 class="text-4xl font-black mb-6 text-white">הסוכן הבא שלכם</h3>
+                    <p class="text-xl text-gray-300 mb-12 leading-relaxed font-light">
+                        כל עסק הוא עולם. אנחנו נשב יחד, נבין מה המשימה שגוזלת לכם הכי הרבה אנרגיה, ונבנה סוכן AI שיתפור לכם בדיוק את הפתרון הזה.
+                    </p>
+                    <a href="#contact" class="btn-premium px-12 py-5 rounded-3xl text-xl font-black">בואו נבנה לכם סוכן</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 bg-[#0F0F0F] relative">
+        <div class="container mx-auto max-w-5xl">
+            <div class="card-dark rounded-[48px] p-8 md:p-20 shadow-2xl relative overflow-hidden border border-gold/10">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gold/10 rounded-bl-full"></div>
+
+                <div class="text-center mb-16 relative z-10">
+                    <h2 class="h-black text-4xl md:text-7xl mb-6 text-white">מוכנים לבנות צוות?</h2>
+                    <p class="text-2xl text-gray-400 font-light">השאירו פרטים, ונעבור יחד לאפיון הסוכן הראשון שלכם.</p>
+                </div>
+                
+                <form id="hybridAgentForm" class="grid grid-cols-1 md:grid-cols-2 gap-10 text-right relative z-10">
+                    <div class="space-y-3">
+                        <label class="font-bold text-gold-light mr-2">שם מלא</label>
+                        <input type="text" id="name" class="form-input" placeholder="מי אתם?" required>
+                    </div>
+                    <div class="space-y-3">
+                        <label class="font-bold text-gold-light mr-2">טלפון / אימייל</label>
+                        <input type="text" id="contactInfo" class="form-input" placeholder="איך נחזור אליכם?" required>
+                    </div>
+                    <div class="md:col-span-2 space-y-3">
+                        <label class="font-bold text-gold-light mr-2">מה המשימה הראשונה שהייתם רוצים להעביר לסוכן?</label>
+                        <textarea id="goal" class="form-input h-40" placeholder="ספרו לי על משימה ששורפת לכם זמן..."></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="md:col-span-2 btn-premium py-7 rounded-3xl text-2xl font-black mt-6 tracking-wide">
+                        אני רוצה צוות דיגיטלי שעובד בשבילי
+                    </button>
+                    <p id="formStatus" class="md:col-span-2 text-center text-sm italic text-gray-500 hidden mt-4">שולח נתונים ומעביר לוואטסאפ...</p>
+                </form>
+
+                <div class="mt-20 pt-16 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 relative z-10">
+                    <div class="flex items-center gap-4 group">
+                        <span class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all"><i class="fas fa-phone"></i></span>
+                        <a href="tel:0548383451" class="font-black text-xl text-white/90 hover:text-gold transition-colors">054-8383451</a>
+                    </div>
+                    <div class="flex items-center gap-4 group">
+                        <span class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all"><i class="fas fa-envelope"></i></span>
+                        <a href="mailto:pninakar@gmail.com" class="font-black text-xl text-white/90 hover:text-gold transition-colors">pninakar@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center opacity-70 text-sm">
+        <div class="container mx-auto px-6">
+            <div class="h-black text-3xl text-gold tracking-tighter mb-4">לב לבינה</div>
+            <p class="text-gray-500 max-w-lg mx-auto leading-relaxed">
+                מרכז להטמעת בינה מלאכותית בעולם הטיפול, האימון והעסקים הרכים. 
+                אנחנו בונים טכנולוגיה עם נשמה.
+            </p>
+            <p class="text-gray-600 text-xs mt-10">© 2026 לב לבינה | פנינה קריוף. כל הזכויות שמורות.</p>
+            <p class="text-gray-700 text-xs mt-4 italic">"אני לא מלמדת טכנולוגיה - אני מלמדת איך להרגיש איתה בבית"</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hybridAgentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const statusText = document.getElementById('formStatus');
+            
+            submitBtn.disabled = true;
+            statusText.classList.remove('hidden');
+
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contactInfo').value;
+            const goal = document.getElementById('goal').value;
+
+            // שליחה ל-FormSubmit (גיבוי למייל)
+            fetch("https://formsubmit.co/ajax/pninakar@gmail.com", {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ name, contact, goal, _subject: "PREMIUM AGENT LEAD: לב-לבינה" })
+            });
+
+            // הפניה אישית לוואטסאפ (הודעה מוכנה)
+            const text = `היי פנינה, הגעתי מדף הסוכנים החדש!%0Aשם: ${name}%0Aפרטי קשר: ${contact}%0Aהמשימה לזיקוק: ${goal}`;
+            window.open(`https://wa.me/972548383451?text=${text}`, '_blank');
+            
+            setTimeout(() => {
+                statusText.innerText = "ההודעה נשלחה בהצלחה! פתחנו וואטסאפ להתחלת השיחה.";
+                document.getElementById('hybridAgentForm').reset();
+                submitBtn.disabled = false;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
