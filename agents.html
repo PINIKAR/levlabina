@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>לב לבינה | הצוות הדיגיטלי שלך - סוכני AI בהתאמה אישית</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Heebo:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --premium-dark: #121212;
@@ -98,23 +100,26 @@
 </head>
 <body class="antialiased text-right">
 
-    <nav class="fixed top-0 w-full bg-black/60 backdrop-blur-md z-50 border-b border-white/5 px-8">
-        <div class="container mx-auto py-4 flex justify-between items-center">
-            <div class="text-2xl h-black tracking-tighter text-gold">לב לבינה</div>
-            <div class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-white/80">
-                <a href="#concept" class="hover:text-gold transition-colors active:text-gold">הקונספט</a>
-                <a href="#agents" class="hover:text-gold transition-colors">הסוכנים</a>
-                <a href="#contact" class="hover:text-gold transition-colors">בואו נבנה צוות</a>
-            </div>
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(197, 160, 89, 0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; flex-direction: row-reverse;">
+            <a href="index.html" style="background: white; padding: 5px 12px; border-radius: 10px; display: block;">
+                <img src="logo.png" alt="לב לבינה" style="height: 35px; width: auto;">
+            </a>
+            
+            <a href="index.html" style="color: #C5A059; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid #C5A059; padding: 8px 20px; border-radius: 50px; transition: all 0.3s;" 
+               onmouseover="this.style.background='rgba(197, 160, 89, 0.1)'" 
+               onmouseout="this.style.background='transparent'">
+                <i class="fas fa-arrow-right" style="margin-left: 8px;"></i> חזרה לאתר
+            </a>
         </div>
-    </nav>
+    </header>
 
     <section class="relative pt-48 pb-24 px-6 overflow-hidden bg-black">
         <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
         
         <div class="container mx-auto text-center max-w-5xl relative z-10">
             <div class="badge-premium mb-8">Personal AI Agents</div>
-            <h1 class="h-black text-5xl md:text-8xl mb-12LEADING-NONE">
+            <h1 class="h-black text-5xl md:text-8xl mb-12">
                 להפסיק לעבוד <span class="text-sage">אצל</span> העסק.<br>
                 לנהל <span class="text-gradient" style="background: linear-gradient(to left, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">אימפריה רכה.</span>
             </h1>
@@ -126,7 +131,7 @@
                 <a href="#contact" class="btn-premium px-14 py-6 rounded-3xl text-2xl font-black shadow-2xl">בואו נבנה לכם צוות דיגיטלי</a>
             </div>
             
-            <div class="motto-bar mx-auto max-w-4xl">
+            <div class="motto-bar mx-auto max-w-4xl text-center">
                 "אני לא מלמדת טכנולוגיה - אני מלמדת איך להרגיש איתה בבית"
             </div>
         </div>
@@ -158,7 +163,7 @@
             <div class="text-center mb-24 relative">
                 <div class="absolute inset-0 bg-gold/5 blur-3xl rounded-full"></div>
                 <h2 class="h-black text-4xl md:text-7xl mb-6 text-white z-10 relative">העובדים החדשים שלכם</h2>
-                <p class="text-2xl text-gray-400 font-light z-10 relative">כל סוכן נבנה אישית סביב הידע והניסיון שלכם.</p>
+                <p class="text-2xl text-gray-400 font-light z-10 relative text-center">כל סוכן נבנה אישית סביב הידע והניסיון שלכם.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -213,8 +218,8 @@
 
                 <div class="card-dark p-12 bg-sage/10 border-sage/20 flex flex-col items-center justify-center text-center group hover:border-gold transition-all">
                     <div class="text-6xl mb-8 group-hover:scale-110 transition-transform">🚀</div>
-                    <h3 class="text-4xl font-black mb-6 text-white">הסוכן הבא שלכם</h3>
-                    <p class="text-xl text-gray-300 mb-12 leading-relaxed font-light">
+                    <h3 class="text-4xl font-black mb-6 text-white text-center">הסוכן הבא שלכם</h3>
+                    <p class="text-xl text-gray-300 mb-12 leading-relaxed font-light text-center">
                         כל עסק הוא עולם. אנחנו נשב יחד, נבין מה המשימה שגוזלת לכם הכי הרבה אנרגיה, ונבנה סוכן AI שיתפור לכם בדיוק את הפתרון הזה.
                     </p>
                     <a href="#contact" class="btn-premium px-12 py-5 rounded-3xl text-xl font-black">בואו נבנה לכם סוכן</a>
@@ -230,8 +235,8 @@
                 <div class="absolute top-0 right-0 w-40 h-40 bg-gold/10 rounded-bl-full"></div>
 
                 <div class="text-center mb-16 relative z-10">
-                    <h2 class="h-black text-4xl md:text-7xl mb-6 text-white">מוכנים לבנות צוות?</h2>
-                    <p class="text-2xl text-gray-400 font-light">השאירו פרטים, ונעבור יחד לאפיון הסוכן הראשון שלכם.</p>
+                    <h2 class="h-black text-4xl md:text-7xl mb-6 text-white text-center">מוכנים לבנות צוות?</h2>
+                    <p class="text-2xl text-gray-400 font-light text-center">השאירו פרטים, ונעבור יחד לאפיון הסוכן הראשון שלכם.</p>
                 </div>
                 
                 <form id="hybridAgentForm" class="grid grid-cols-1 md:grid-cols-2 gap-10 text-right relative z-10">
@@ -268,15 +273,26 @@
         </div>
     </section>
 
-    <footer class="py-20 text-center opacity-70 text-sm">
-        <div class="container mx-auto px-6">
-            <div class="h-black text-3xl text-gold tracking-tighter mb-4">לב לבינה</div>
-            <p class="text-gray-500 max-w-lg mx-auto leading-relaxed">
-                מרכז להטמעת בינה מלאכותית בעולם הטיפול, האימון והעסקים הרכים. 
-                אנחנו בונים טכנולוגיה עם נשמה.
+    <footer style="background-color: #050505; color: #A0A0A0; padding: 80px 20px; text-align: center; border-top: 1px solid rgba(197, 160, 89, 0.2);">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-weight: 900; color: #C5A059; font-size: 28px; margin-bottom: 10px;">לב לבינה - פנינה קריוף</h2>
+            <p style="font-size: 16px; margin-bottom: 30px; opacity: 0.8;">
+                מרכז להטמעת בינה מלאכותית בעולם הטיפול, האימון והעסקים הרכים. מחברים בין הלב לטכנולוגיה.
             </p>
-            <p class="text-gray-600 text-xs mt-10">© 2026 לב לבינה | פנינה קריוף. כל הזכויות שמורות.</p>
-            <p class="text-gray-700 text-xs mt-4 italic">"אני לא מלמדת טכנולוגיה - אני מלמדת איך להרגיש איתה בבית"</p>
+
+            <div style="margin-bottom: 30px; font-size: 14px; font-weight: 600;">
+                <a href="index.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px; transition: color 0.3s;" onmouseover="this.style.color='#C5A059'" onmouseout="this.style.color='#A0A0A0'">בית</a>
+                <a href="services.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px; transition: color 0.3s;" onmouseover="this.style.color='#C5A059'" onmouseout="this.style.color='#A0A0A0'">שירותים</a>
+                <a href="privacy.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px; transition: color 0.3s;" onmouseover="this.style.color='#C5A059'" onmouseout="this.style.color='#A0A0A0'">מדיניות פרטיות</a>
+                <a href="terms.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px; transition: color 0.3s;" onmouseover="this.style.color='#C5A059'" onmouseout="this.style.color='#A0A0A0'">תקנון האתר</a>
+                <a href="accessibility.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px; transition: color 0.3s;" onmouseover="this.style.color='#C5A059'" onmouseout="this.style.color='#A0A0A0'">הצהרת נגישות</a>
+            </div>
+
+            <p style="font-style: italic; font-size: 14px; color: #666; margin-bottom: 20px;">
+                "אני לא מלמדת טכנולוגיה - אני מלמדת איך להרגיש איתה בבית"
+            </p>
+
+            <p style="font-size: 12px; opacity: 0.5;">&copy; 2026 כל הזכויות שמורות לפנינה קריוף</p>
         </div>
     </footer>
 
@@ -313,21 +329,3 @@
     </script>
 </body>
 </html>
-<footer style="background-color: #050505; color: #A0A0A0; padding: 60px 20px; text-align: center; border-top: 1px solid rgba(197, 160, 89, 0.2);">
-    <div style="max-width: 1000px; margin: 0 auto;">
-        <h2 style="font-family: 'Heebo', sans-serif; font-weight: 900; color: #C5A059; font-size: 24px; margin-bottom: 10px;">לב לבינה - פנינה קריוף</h2>
-        <p style="font-size: 16px; margin-bottom: 30px; opacity: 0.8;">
-            מרכז להטמעת בינה מלאכותית בעולם הטיפול, האימון והעסקים הרכים.
-        </p>
-
-        <div style="margin-bottom: 30px; font-size: 14px;">
-            <a href="index.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px;">בית</a>
-            <a href="services.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px;">שירותים</a>
-            <a href="privacy.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px;">מדיניות פרטיות</a>
-            <a href="terms.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px;">תקנון</a>
-            <a href="accessibility.html" style="color: #A0A0A0; text-decoration: none; margin: 0 15px;">הצהרת נגישות</a>
-        </div>
-
-        <p style="font-size: 12px; opacity: 0.5;">&copy; 2026 כל הזכויות שמורות לפנינה קריוף</p>
-    </div>
-</footer>
