@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תודה שהצטרפת! | לב לבינה</title>
+    <title>איזה כיף, אנחנו יוצאות לדרך! | לב-לבינה</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -18,48 +18,96 @@
         }
         .container {
             background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            max-width: 500px;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+            max-width: 600px;
             width: 90%;
             text-align: center;
         }
         h1 {
             color: #9CA18F; /* ירוק מרווה */
+            font-size: 2.2rem;
             margin-bottom: 20px;
         }
         p {
+            font-size: 1.1rem;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            color: #555;
+        }
+        .action-steps {
+            text-align: right;
+            margin-bottom: 40px;
+            background: #fdfdfd;
+            padding: 20px;
+            border-right: 4px solid #C5A059; /* זהב עמוק */
+            border-radius: 4px;
+        }
+        .action-steps h3 {
+            margin-top: 0;
+            color: #9CA18F;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         .btn {
-            display: block;
+            display: inline-block;
+            padding: 18px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .btn-gold {
             background-color: #C5A059; /* זהב עמוק */
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin: 10px auto;
-            transition: transform 0.2s;
-            max-width: 250px;
+        }
+        .btn-sage {
+            background-color: #9CA18F; /* ירוק מרווה */
+            color: white;
         }
         .btn:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            opacity: 0.9;
         }
-        .btn-secondary {
-            background-color: #9CA18F; /* ירוק מרווה */
+        .footer-note {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #999;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>איזה כיף, אנחנו יוצאות לדרך!</h1>
-        <p>ההרשמה לסדנת המאסטר בוצעה בהצלחה. אני כבר מחכה לראות אותך בונה את סוכן ה-AI הראשון שלך בשיטת R.O.L.E.</p>
+        <p>
+            ההרשמה לסדנת המאסטר בוצעה בהצלחה. <br>
+            אני כבר מחכה לראות אותך בונה את סוכן ה-AI הראשון שלך בשיטת **R.O.L.E**.
+        </p>
+
+        <div class="action-steps">
+            <h3>מה עושים עכשיו?</h3>
+            <ol>
+                <li>**מצטרפים לקבוצה השקטה:** שם אשלח את הקישור לזום ועדכונים חשובים.</li>
+                <li>**מורידים את ערכת ההכנה:** כדי שנגיע מוכנות וממוקדות לסדנה.</li>
+                <li>**בודקים את המייל:** אישור הרשמה וקבלה בדרך אלייך.</li>
+            </ol>
+        </div>
         
-        <a href="קישור_לקבוצת_הוואטסאפ" class="btn">הצטרפות לקבוצה השקטה</a>
-        <a href="קישור_לערכת_ההכנה" class="btn btn-secondary">הורדת ערכת ההכנה</a>
+        <div class="btn-container">
+            <a href="https://did.li/masterAI" class="btn btn-gold">הצטרפות לקבוצת העדכונים בוואטסאפ</a>
+            <a href="https://drive.google.com/file/d/1EU9KQ4gAjtP2q07GjM-_245omcOd-l60/view?usp=sharing" class="btn btn-sage">הורדת ערכת ההכנה למאסטר-קלאס</a>
+        </div>
+
+        <div class="footer-note">
+            פנינה קריוף | לב-לבינה <br>
+            מתחברים לטכנולוגיה בלי לפחד ממנה.
+        </div>
     </div>
 </body>
 </html>
