@@ -32,34 +32,38 @@
         h1 {
             color: #9CA18F; /* ירוק מרווה */
             font-size: 2.2rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             margin-top: 0;
         }
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 35px;
-            color: #555;
+        .event-box {
+            background-color: #fdfdfd;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-top: 5px solid #C5A059; /* זהב עמוק */
+        }
+        .event-box p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .meet-link {
+            color: #C5A059;
+            text-decoration: underline;
         }
         .action-steps {
             text-align: right;
             margin-bottom: 40px;
             background: #fdfdfd;
             padding: 20px;
-            border-right: 4px solid #C5A059; /* זהב עמוק */
+            border-right: 4px solid #9CA18F; /* ירוק מרווה */
             border-radius: 4px;
         }
         .action-steps h3 {
             margin-top: 0;
             color: #9CA18F;
             font-size: 1.3rem;
-        }
-        .action-steps ol {
-            padding-right: 20px;
-            margin-bottom: 0;
-        }
-        .action-steps li {
-            margin-bottom: 12px;
         }
         .btn-container {
             display: flex;
@@ -99,17 +103,20 @@
         <img src="logo.png" alt="לוגו לב-לבינה" class="logo">
         
         <h1>איזה כיף, אנחנו יוצאות לדרך!</h1>
-        <p>
-            ההרשמה לסדנת המאסטר בוצעה בהצלחה. <br>
-            אני כבר מחכה לראות אותך בונה את סוכן ה-AI הראשון שלך בשיטת <strong>R.O.L.E.</strong>
-        </p>
+        <p>ההרשמה לסדנת המאסטר בוצעה בהצלחה.</p>
+
+        <div class="event-box">
+            <p>ניפגש ביום רביעי, 25.3.26</p>
+            <p>בין השעות 19:00 עד 22:00</p>
+            <p>בקישור הבא: <a href="https://meet.google.com/cgp-mioe-sfj" class="meet-link" target="_blank">לינק לשיחת הווידאו ב-Google Meet</a></p>
+        </div>
 
         <div class="action-steps">
             <h3>מה עושים עכשיו?</h3>
             <ol>
-                <li><strong>מצטרפים לקבוצה השקטה:</strong> שם אשלח את הקישור לזום ועדכונים חשובים.</li>
+                <li><strong>מצטרפים לקבוצה השקטה:</strong> שם אשלח תזכורות ועדכונים חשובים.</li>
                 <li><strong>מורידים את ערכת ההכנה:</strong> כדי שנגיע מוכנות וממוקדות לסדנה.</li>
-                <li><strong>בודקים את המייל:</strong> אישור הרשמה וקבלה בדרך אלייך.</li>
+                <li><strong>שומרים ביומן:</strong> ודאי שהזמן הזה מוקדש רק לך ולסוכן החדש שלך.</li>
             </ol>
         </div>
         
