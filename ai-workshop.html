@@ -111,6 +111,16 @@
             font-weight: 800;
             margin-left: 10px;
         }
+
+        .profile-image {
+            width: 100%;
+            max-width: 360px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 28px;
+            border: 2px solid rgba(197, 160, 89, 0.35);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -128,13 +138,13 @@
         <div class="max-w-6xl mx-auto">
             <img src="https://lev-labina.pnina-karayoff.com/logo.png" alt="לב לבינה" class="h-20 md:h-24 mx-auto mb-12 brightness-0 invert opacity-90" />
 
-            <h1 class="text-5xl md:text-[110px] font-extrabold mb-8 leading-[0.9] tracking-tight text-white">
-                לראות. להבין. <br />
-                <span class="text-gold">לבנות.</span>
+            <h1 class="text-5xl md:text-[88px] font-extrabold mb-8 leading-[0.95] tracking-tight text-white">
+                לא צריך להיות טכנולוגית<br />
+                כדי להתחיל לעבוד עם <span class="text-gold">AI</span>
             </h1>
 
             <p class="max-w-3xl mx-auto text-xl md:text-3xl text-white/80 font-light leading-relaxed mb-12">
-                סדנה מעשית לבעלות עסק, מטפלות ומנחות שרוצות להבין איך לעבוד עם AI בצורה פשוטה, אנושית ומדויקת
+                סדנה מעשית למטפלות, מנחות ובעלות עסק שרוצות להבין איך לעבוד עם AI בצורה פשוטה, אנושית ומדויקת
             </p>
 
             <div class="inline-flex flex-col md:flex-row items-center gap-6 px-8 py-5 rounded-3xl mb-16 glass-card">
@@ -223,7 +233,7 @@
                 </div>
 
                 <div class="glass-card p-10 text-xl md:text-2xl text-white/85 leading-relaxed">
-                    <p class="bullet-check">את רוצה ליצור תוכן, מיילים ופוסטים יותר בקלות</p>
+                    <p class="bullet-check">את רוצה ליצור תוכן, הודעות, מיילים ופוסטים יותר בקלות</p>
                     <p class="bullet-check">את מחפשת דרך פשוטה, אנושית ומעשית להתחיל</p>
                     <p class="bullet-check">את לא מחפשת עוד תאוריה, אלא משהו שאפשר ליישם מיד</p>
                 </div>
@@ -272,12 +282,29 @@
 
     <!-- About -->
     <section class="py-28 px-6">
-        <div class="max-w-4xl mx-auto glass-card p-10 md:p-14 text-right">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">מי אני</h2>
-            <p class="text-xl md:text-2xl text-white/80 font-light leading-relaxed">
-                אני פנינה קריוף, מלווה עצמאיות, מטפלות ומנחות לפגוש את ה-AI בלי פחד.
-                בדרך אנושית, פשוטה, מדויקת, ובלי להפוך את זה לעוד כאב ראש טכני.
-            </p>
+        <div class="max-w-5xl mx-auto glass-card p-10 md:p-14">
+            <div class="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-10 items-center">
+                <div class="flex justify-center md:justify-start">
+                    <img
+                        src="https://lev-labina.pnina-karayoff.com/pnina-profile.jpg"
+                        alt="פנינה קריוף"
+                        class="profile-image"
+                    />
+                </div>
+
+                <div class="text-right">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">מי אני</h2>
+                    <p class="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-5">
+                        אני פנינה קריוף, מלווה עצמאיות, מטפלות ומנחות לפגוש את ה-AI בלי פחד.
+                    </p>
+                    <p class="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-5">
+                        בדרך אנושית, פשוטה, מדויקת, ובלי להפוך את זה לעוד כאב ראש טכני.
+                    </p>
+                    <p class="text-lg md:text-xl text-gold font-bold leading-relaxed">
+                        המטרה שלי היא לעזור לך להבין את העולם החדש בלי להרגיש שאת הולכת לאיבוד בתוכו.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
